@@ -70,8 +70,12 @@ and the pastel/plum reference. Run it from the repository root:
 ```bash
 source "$HOME/.venv/bin/activate"
 python -m pip install -e '.[app,dev]'
-PYTHONPATH=src streamlit run src/app/dashboard.py --server.port 8503
+streamlit run app.py --server.port 8503
 ```
+
+For Streamlit Community Cloud, select this repository, branch `main`, and set
+the main file path to `app.py`. Configure SSI credentials only through
+Streamlit Secrets or the deployment environment; never commit `.env`.
 
 Open the full market table at **http://localhost:8503/?view=market**. It lists
 1,517 SSI-classified stocks (410 HOSE, 299 HNX, 808 UPCoM), with company/ICB
