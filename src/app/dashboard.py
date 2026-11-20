@@ -60,6 +60,7 @@ def workspace(st,ss,universe,context):
         elif page=="Market Pulse": pages.market_pulse(st,ss,vm,rows,status,universe)
         elif page=="Replay": pages.replay(st,ss,vm,rows,status)
         elif page=="Charts": pages.chart_studio(st,ss,vm,rows,status)
+        elif page=="So sánh mã": pages.compare_symbols(st,ss,status,universe)
         elif page=="Alerts": pages.alerts(st,ss,vm,rows,status)
         elif page=="Settings": pages.settings(st,ss,status)
     with right: components.right_rail(st,ss,vm,rows,status,universe)

@@ -248,6 +248,144 @@ def chart_studio(st,ss,vm,rows,status):
             st.download_button("↓ Xuất chuỗi chỉ số JSON",json.dumps(export,ensure_ascii=False),file_name=f"{ss['mode']}_metrics.json",mime="application/json")
 
 
+def compare_symbols(st, ss, status, universe):
+    """Compare executable liquidity across real SSI snapshots only."""
+    import math
+    import plotly.graph_objects as go
+
+    available = list(dict.fromkeys(row["symbol"] for row in universe))
+    metadata = {row["symbol"]: row for row in universe}
+    defaults = [symbol for symbol in ss.get("compare_symbols", []) if symbol in available]
+    if len(defaults) < 2:
+        defaults = [symbol for symbol in ["FPT", "VPB", "SSI", "HPG", "VNM"] if symbol in available][:5]
+
+    st.markdown(
+        '''<section class="lg-compare-hero"><div><small>SSI · LIQUIDITY COMPARISON</small>
+        <h1>So sánh thanh khoản giữa các mã</h1>
+        <p>Đối chiếu khả năng thực thi trên cùng chế độ dữ liệu, ngày giao dịch và khối lượng giả định.</p>
+        <span>Spread</span><span>Depth L1–L3</span><span>Coverage</span><span>VWAP impact</span></div></section>''',
+        unsafe_allow_html=True,
+    )
+    with st.container(key="lg_card_compare_picker"):
+        selected = st.multiselect(
+            "Chọn từ 2 đến 10 mã", available, default=defaults, max_selections=10,
+            key="compare_symbol_picker", help="Chỉ dùng các mã thuộc phạm vi SSI đã capture.",
+        )
+        ss["compare_symbols"] = selected
+        st.caption(f"{ss['mode']} · ngày {ss.get('selected_date') or 'mới nhất'} · khối lượng giả định {fmt(ss['requested_qty'])} CP · tối đa 10 mã")
+    if len(selected) < 2:
+        st.info("Hãy chọn ít nhất hai mã để so sánh.")
+        return
+
+    records = []
+    histories = {}
+    for symbol in selected:
+        symbol_rows = load_quotes(ss["mode"], symbol)
+        if ss["mode"] == "REPLAY" and ss.get("selected_date"):
+            symbol_rows = [
+                row for row in symbol_rows
+                if (lambda stamp: stamp is not None and stamp.date().isoformat() == ss["selected_date"])(
+                    parse_time(row.get("quote_time_vn") or row.get("received_at_utc"))
+                )
+            ]
+        histories[symbol] = observation_history_points(symbol_rows)
+        candidates = []
+        for quote in symbol_rows:
+            view = make_view(quote, ss["mode"], status, ss["trade_side"], ss["requested_qty"], stale_seconds=ss["stale_seconds"])
+            if view["trust"]["allowed"]:
+                candidates.append(view)
+        if not candidates:
+            records.append({
+                "symbol": symbol, "board": metadata.get(symbol, {}).get("board", "—"),
+                "sector": metadata.get(symbol, {}).get("sector", "UNCLASSIFIED"),
+                "trust": "BLOCKED", "reason": "Không có snapshot đủ Data Trust trong phạm vi đã chọn",
+            })
+            continue
+        view = candidates[-1]
+        metric, simulation, quote = view["metrics"], view["simulation"], view["quote"]
+        records.append({
+            "symbol": symbol, "board": metadata.get(symbol, {}).get("board", "—"),
+            "sector": metadata.get(symbol, {}).get("sector", "UNCLASSIFIED"),
+            "trust": view["trust"]["label"], "reason": "",
+            "time": local_time(quote.get("quote_time_vn"), True),
+            "spread": metric.get("spread_bps"), "bid_depth": metric.get("bid_depth_3"),
+            "ask_depth": metric.get("ask_depth_3"),
+            "depth": (metric.get("bid_depth_3") or 0) + (metric.get("ask_depth_3") or 0),
+            "obi": metric.get("obi_3"), "coverage": simulation.get("coverage_ratio") * 100 if simulation else None,
+            "impact": abs(simulation.get("slippage_bps")) if simulation and simulation.get("slippage_bps") is not None else None,
+        })
+
+    valid = [row for row in records if row.get("coverage") is not None]
+    def normalized(value, values, inverse=False):
+        finite = [float(number) for number in values if number is not None and math.isfinite(float(number))]
+        if value is None or not finite:
+            return 0.0
+        low, high = min(finite), max(finite)
+        score = 1.0 if high == low else (float(value) - low) / (high - low)
+        return 1.0 - score if inverse else score
+
+    for row in valid:
+        row["score"] = 100 * (
+            .25 * normalized(row["spread"], [item["spread"] for item in valid], True)
+            + .25 * normalized(row["depth"], [item["depth"] for item in valid])
+            + .30 * normalized(row["coverage"], [item["coverage"] for item in valid])
+            + .20 * normalized(row["impact"], [item["impact"] for item in valid], True)
+        )
+    valid.sort(key=lambda row: row["score"], reverse=True)
+    rank = {row["symbol"]: index + 1 for index, row in enumerate(valid)}
+
+    with st.container(key="lg_card_compare_summary"):
+        if valid:
+            best = valid[0]
+            cols = st.columns(5)
+            cols[0].metric("Mã đứng đầu", best["symbol"])
+            cols[1].metric("Điểm thanh khoản", f"{best['score']:.1f}/100")
+            cols[2].metric("Spread", f"{best['spread']:.2f} bps")
+            cols[3].metric("Depth 3 mức", fmt(best["depth"]) + " CP")
+            cols[4].metric("Coverage", f"{best['coverage']:.1f}%")
+        else:
+            st.warning("Không có mã nào đủ Data Trust để tính so sánh trong phạm vi đã chọn.")
+
+    table = []
+    for row in records:
+        table.append({
+            "Hạng": rank.get(row["symbol"], "—"), "Mã": row["symbol"], "Sàn": row["board"],
+            "Ngành": "Chưa phân loại" if row["sector"] == "UNCLASSIFIED" else row["sector"],
+            "Điểm": round(row.get("score", 0), 1) if row.get("score") is not None else None,
+            "Spread (bps)": row.get("spread"), "Depth 3 mức (CP)": row.get("depth"),
+            "Coverage (%)": row.get("coverage"), "Impact (bps)": row.get("impact"),
+            "OBI": row.get("obi"), "Snapshot": row.get("time", "—"), "Data Trust": row["trust"],
+        })
+    with st.container(key="lg_card_compare_table"):
+        st.subheader("Bảng xếp hạng khả năng thực thi")
+        st.dataframe(table, hide_index=True, width="stretch")
+        st.caption("Điểm chỉ so sánh khả năng thực thi trong nhóm mã đang chọn: Spread 25%, Depth 25%, Coverage 30%, Impact 20%. Không phải khuyến nghị đầu tư.")
+
+    if valid:
+        symbols = [row["symbol"] for row in valid]
+        cols = st.columns(3, gap="small")
+        spread = go.Figure(go.Bar(x=symbols, y=[row["spread"] for row in valid], marker_color="#9563C4"))
+        depth = go.Figure()
+        depth.add_bar(name="Bid", x=symbols, y=[row["bid_depth"] for row in valid], marker_color="#A8DDB5")
+        depth.add_bar(name="Ask", x=symbols, y=[row["ask_depth"] for row in valid], marker_color="#F2A0B6")
+        execution = go.Figure(go.Scatter(
+            x=[row["coverage"] for row in valid], y=[row["impact"] for row in valid], mode="markers+text",
+            text=symbols, textposition="top center", marker={"size": 16, "color": [row["score"] for row in valid], "colorscale": "Purples"},
+        ))
+        execution.update_xaxes(title="Coverage (%)"); execution.update_yaxes(title="Impact (bps)")
+        with cols[0]: chart_card(st, "Spread theo mã", "compare_symbol_spread", charts.style(spread, 260))
+        with cols[1]: chart_card(st, "Bid/Ask Depth ba mức", "compare_symbol_depth", charts.style(depth, 260))
+        with cols[2]: chart_card(st, "Coverage và Price Impact", "compare_symbol_execution", charts.style(execution, 260))
+
+        timeline = go.Figure()
+        for symbol in symbols[:5]:
+            points = histories.get(symbol, [])
+            timeline.add_scatter(x=[point["time"] for point in points], y=[point.get("spread_bps") for point in points], mode="lines", name=symbol)
+        with st.container(key="lg_card_compare_timeline"):
+            st.subheader("Diễn biến Spread của tối đa 5 mã")
+            st.plotly_chart(charts.style(timeline, 290), width="stretch", config={"displayModeBar": False})
+
+
 def alerts(st,ss,vm,rows,status):
     with st.container(key="lg_card_alerts"):
         st.subheader("Alerts & Data Trust")

@@ -51,7 +51,7 @@ def header(st, ss):
         cols = st.columns([2.3, 8.8, 1.9], gap="small")
         cols[0].markdown(f'<div class="lg-brand"><img src="{mascot_uri()}" alt="Linh vật LiquidityGuard">LiquidityGuard</div>', unsafe_allow_html=True)
         with cols[1]:
-            tabs = st.columns([1.25,1.4,1.2,1.0,.9,.85,1.1], gap="small")
+            tabs = st.columns([1.15,1.3,1.0,.85,.75,1.1,.75,.9], gap="small")
             for col, page, ico in zip(tabs, state.PAGES, state.ICONS):
                 col.button(page, key=f"nav_{page}", type="primary" if ss["page"] == page else "tertiary", on_click=state.navigate, args=(ss,page), width="stretch")
         cols[2].markdown(f'<div class="lg-greeting">Xin chào, nhà đầu tư 👋<br><small>{datetime.now(VN):%d/%m · %H:%M} UTC+7 · SSI</small></div>', unsafe_allow_html=True)

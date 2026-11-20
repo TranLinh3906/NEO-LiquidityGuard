@@ -40,6 +40,7 @@ html,body,[class*="css"] {font-family:Inter,sans-serif;}
 .lg-health{font-size:10px;display:flex;justify-content:space-between;gap:6px;padding:5px 0;border-bottom:1px solid #3e2f4f0a;}.lg-health b{max-width:65%;text-align:right;overflow-wrap:anywhere;}
 .lg-footer{font-size:10px;color:#e6d9ea;text-align:center;padding-top:10px;}
 .lg-mode-banner{font-size:11px;color:#fff;background:#dccff01f;border:1px solid #dccff033;border-radius:12px;padding:6px 10px;}
+.lg-compare-hero{min-height:150px;margin:4px 0 10px;padding:24px 28px;border-radius:26px;color:white;background:radial-gradient(circle at 82% 35%,#f3c9dd88 0,transparent 28%),linear-gradient(115deg,#6E547D,#A77EC0 64%,#D7B38C);box-shadow:0 12px 28px #30243c20}.lg-compare-hero h1{margin:4px 0 5px;font:900 34px 'Nunito Sans',sans-serif;letter-spacing:-1px}.lg-compare-hero p{margin:0 0 14px;font-size:12px}.lg-compare-hero small{font-size:9px;font-weight:800;letter-spacing:1.5px;color:#F2E6D7}.lg-compare-hero span{display:inline-block;margin-right:6px;padding:5px 9px;border-radius:999px;background:#fff9;color:#3E2F4F;font-size:9px;font-weight:800}
 [class*="st-key-lg_card"],[class*="st-key-lg_chart"],.st-key-lg_trade,.st-key-lg_settings,.st-key-lg_filters{background:linear-gradient(140deg,#FAF7FC,#fcf1ee);border:1px solid #ffffff99;border-radius:24px;padding:14px;box-shadow:0 6px 16px #24192f18;}
 .st-key-lg_trade{background:linear-gradient(115deg,#F2E6D7,#DCCFF0,#F3C9DD);padding:9px 14px;}
 .st-key-lg_header [data-testid="stHorizontalBlock"]{align-items:center;}

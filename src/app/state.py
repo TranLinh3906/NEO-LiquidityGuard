@@ -1,7 +1,7 @@
 """One workspace state shared by all seven Streamlit pages."""
 from ssi_api.symbol_groups import VN30_SYMBOLS
-PAGES = ["Dashboard", "Market Pulse", "Simulator", "Replay", "Charts", "Alerts", "Settings"]
-ICONS = ["house", "activity", "play", "history", "chart-no-axes-column-increasing", "bell", "settings"]
+PAGES = ["Dashboard", "Market Pulse", "Simulator", "Replay", "Charts", "So sánh mã", "Alerts", "Settings"]
+ICONS = ["house", "activity", "play", "history", "chart-no-axes-column-increasing", "layers", "bell", "settings"]
 _WATCHLIST_PRIORITY = ("FPT", "VPB", "SSI", "HPG", "VNM", "VCB", "MWG", "TCB", "MBB", "VIC")
 DEFAULT_WATCHLIST = list(dict.fromkeys(_WATCHLIST_PRIORITY + VN30_SYMBOLS))
 DEFAULTS = {
@@ -10,6 +10,7 @@ DEFAULTS = {
     "selected_date": None, "playing": False, "replay_speed": 1,
     "selected_session": "Cả ngày",
     "density": "Thoải mái", "number_format": "1.234,56", "watchlist": DEFAULT_WATCHLIST,
+    "compare_symbols": ["FPT", "VPB", "SSI", "HPG", "VNM"],
     "stale_seconds": 60, "compare_snapshot_id": None, "compare_open": False,
 }
 
