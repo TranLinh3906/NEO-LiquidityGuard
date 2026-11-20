@@ -1,10 +1,7 @@
 """Reusable native widgets and presentational cards for the workspace."""
 from __future__ import annotations
-import base64
-from functools import lru_cache
 from html import escape
 from datetime import datetime
-from pathlib import Path
 from contextvars import ContextVar
 from app import state
 from app.view_models import VN, local_time, load_quotes, make_view, history_points
@@ -32,12 +29,6 @@ def icon(name):
     return '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICON_PATHS.get(name, ICON_PATHS["layers"]) + '</svg>'
 
 
-@lru_cache(maxsize=1)
-def mascot_uri():
-    path = Path(__file__).parent / "assets/mascot.png"
-    return "data:image/png;base64," + base64.b64encode(path.read_bytes()).decode()
-
-
 def fmt(value, decimals=0, style=None):
     if value is None:
         return "—"
@@ -49,7 +40,7 @@ def fmt(value, decimals=0, style=None):
 def header(st, ss):
     with st.container(key="lg_header"):
         cols = st.columns([2.3, 8.8, 1.9], gap="small")
-        cols[0].markdown(f'<div class="lg-brand"><img src="{mascot_uri()}" alt="Linh vật LiquidityGuard">LiquidityGuard</div>', unsafe_allow_html=True)
+        cols[0].markdown('<div class="lg-brand">LiquidityGuard</div>', unsafe_allow_html=True)
         with cols[1]:
             tabs = st.columns([1.15,1.3,1.0,.85,.75,1.1,.75,.9], gap="small")
             for col, page, ico in zip(tabs, state.PAGES, state.ICONS):
@@ -113,7 +104,7 @@ def hero(st, vm, ss):
     steps = ["Dữ liệu đã tải", "Sổ lệnh hợp lệ", "Đã tính mô phỏng", "Có giải thích kết quả"]
     progress = int(sum(complete)/4*100)
     items = ''.join(f'<div class="lg-step {"" if passed else "pending"}"><i>{"✓" if passed else "○"}</i>{label}</div>' for passed,label in zip(complete,steps))
-    st.markdown(f'''<div class="lg-hero"><div class="lg-hero-copy"><div class="lg-eyebrow" style="color:#f3c9dd">Your liquidity playground</div><h1>Execution Lab</h1><p>Thử một khối lượng,<br>hiểu rõ khả năng đáp ứng<br>trong 3 mức giá.</p><div class="lg-hero-badge"><span class="lg-pill">{ss['selected_symbol']} · {vm['trust']['label']}</span></div></div><img class="lg-mascot" src="{mascot_uri()}" alt="Linh vật LiquidityGuard"><div class="lg-progress"><strong>Execution Progress <span style="float:right">{progress}%</span></strong><div class="lg-progress-track"><span style="width:{progress}%"></span></div>{items}</div></div>''',unsafe_allow_html=True)
+    st.markdown(f'''<div class="lg-hero"><div class="lg-hero-copy"><div class="lg-eyebrow" style="color:#f3c9dd">Your liquidity workspace</div><h1>Execution Lab</h1><p>Thử một khối lượng,<br>hiểu rõ khả năng đáp ứng<br>trong 3 mức giá.</p><div class="lg-hero-badge"><span class="lg-pill">{ss['selected_symbol']} · {vm['trust']['label']}</span></div></div><div class="lg-progress"><strong>Execution Progress <span style="float:right">{progress}%</span></strong><div class="lg-progress-track"><span style="width:{progress}%"></span></div>{items}</div></div>''',unsafe_allow_html=True)
     mode_control(st,ss)
 
 
@@ -219,8 +210,7 @@ def execution_sidebar(st, ss):
     """Locked-spec navigation used only by Execution Lab."""
     with st.container(key="lg_exec_sidebar"):
         st.markdown(
-            f'<div class="lg-exec-brand"><img src="{mascot_uri()}" alt="LiquidityGuard mascot">'
-            '<div><strong>LiquidityGuard</strong><span>Liquidity Intelligence for<br>Smarter Execution</span></div></div>',
+            '<div class="lg-exec-brand"><div><strong>LiquidityGuard</strong><span>Liquidity Intelligence for<br>Smarter Execution</span></div></div>',
             unsafe_allow_html=True,
         )
         entries = [
@@ -295,7 +285,6 @@ def execution_hero(st, vm, ss):
           <p>Hiểu thanh khoản và kiểm chứng quyết định giao dịch:<br><b>Liệu một lệnh có thể được đáp ứng trong 3 mức giá?</b></p>
           <div class="lg-exec-tags"><span>⚡ Ước tính khả năng đáp ứng</span><span>◎ Đo tác động giá</span><span>◈ Hỗ trợ quyết định</span></div>
           <small>{escape(ss['selected_symbol'])} · {mode_label}</small></div>
-          <img src="{mascot_uri()}" alt="Linh vật gấu mèo LiquidityGuard với laptop tím">
           <i class="cloud c1"></i><i class="cloud c2"></i>
         </section>''', unsafe_allow_html=True,
     )
