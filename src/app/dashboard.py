@@ -7,7 +7,7 @@ from app.universe import load_universe, restrict_to_latest_capture
 from app.view_models import ROOT, assess, is_observable_book, load_quotes, local_time, make_view, read_status, parse_time
 
 
-def workspace(st,ss,universe,context,execution_layout=False):
+def workspace(st,ss,universe,context):
     # Native fragment controls rerun this workspace. Refresh the outer header
     # and filters only when a navigation/global preference transition needs it.
     current=(ss["page"],ss["mode"],ss["selected_symbol"],ss["density"],ss["number_format"])
@@ -22,17 +22,8 @@ def workspace(st,ss,universe,context,execution_layout=False):
     if ss["mode"]=="REPLAY" or ss["page"]=="Replay":
         if dates:
             if ss["selected_date"] not in dates: ss["selected_date"]=dates[-1]
-            if not execution_layout:
-                st.selectbox("Ngày có dữ liệu",dates,key="selected_date",on_change=lambda:ss.update(snapshot_id=None,playing=False))
+            st.selectbox("Ngày có dữ liệu",dates,key="selected_date",on_change=lambda:ss.update(snapshot_id=None,playing=False))
             rows=[r for r in rows if parse_time(r.get("quote_time_vn") or r.get("received_at_utc")).date().isoformat()==ss["selected_date"]]
-    if execution_layout and ss.get("selected_session") != "Cả ngày":
-        morning = ss["selected_session"] == "Phiên sáng"
-        rows = [
-            row for row in rows
-            if (lambda stamp: stamp is not None and ((stamp.hour < 12) if morning else (stamp.hour >= 12)))(
-                parse_time(row.get("quote_time_vn") or row.get("received_at_utc"))
-            )
-        ]
     ids=[r["quote_id"] for r in rows]
     if ss["snapshot_id"] not in ids or (ss["mode"]=="LIVE" and not ss.get("simulation_record")):
         # LIVE must follow the newest event even when it is blocked. REPLAY,
@@ -53,20 +44,20 @@ def workspace(st,ss,universe,context,execution_layout=False):
         st.select_slider("Timeline · snapshot",options=ids,key="snapshot_picker",format_func=lambda value:local_time(next(r for r in rows if r["quote_id"]==value).get("quote_time_vn"),True),on_change=lambda:ss.update(snapshot_id=ss["snapshot_picker"]))
     quote=next((r for r in rows if r["quote_id"]==ss["snapshot_id"]),None)
     vm=make_view(quote,ss["mode"],status,ss["trade_side"],ss["requested_qty"],stale_seconds=ss["stale_seconds"])
-    if execution_layout:
-        pages.simulator(st,ss,vm,rows,status,universe)
-        return
     compact_label=" · COMPACT SSI REPLAY" if (quote or {}).get("replay_bundle")=="COMPACT_SSI_REPLAY" else ""
     badge="SYNTHETIC_TEST · Dữ liệu giả lập để thử công thức và giao diện" if ss["mode"]=="SYNTHETIC_TEST" else f"{ss['mode']} · {vm['trust']['label']}{compact_label} · SSI FastConnect · WS {status.get('state','offline').upper()}"
     if ss["page"]=="Market Pulse":badge=f"THỊ TRƯỜNG · SSI REST thực đã lưu · Chế độ mô phỏng L3: {ss['mode']}"
     st.markdown(f'<div class="lg-mode-banner">◉ {badge} · {ss["selected_symbol"]}</div>',unsafe_allow_html=True)
-    if ss["page"] not in {"Dashboard","Simulator"}: components.mode_control(st,ss)
+    if ss["page"]!="Dashboard": components.mode_control(st,ss)
+    if ss["page"]=="Simulator":
+        pages.simulator(st,ss,vm,rows,status,universe)
+        st.markdown('<div class="lg-footer">LiquidityGuard · Gen Z Liquidity Intelligence · Mô phỏng giả định trong ba mức giá · Chỉ đọc dữ liệu thị trường</div>',unsafe_allow_html=True)
+        return
     main_col,right=st.columns([3.25,1],gap="small")
     with main_col:
         page=ss["page"]
         if page=="Dashboard": pages.dashboard(st,ss,vm,rows,status)
         elif page=="Market Pulse": pages.market_pulse(st,ss,vm,rows,status,universe)
-        elif page=="Simulator": pages.simulator(st,ss,vm,rows,status,universe)
         elif page=="Replay": pages.replay(st,ss,vm,rows,status)
         elif page=="Charts": pages.chart_studio(st,ss,vm,rows,status)
         elif page=="Alerts": pages.alerts(st,ss,vm,rows,status)
@@ -101,17 +92,8 @@ def main():
         st.stop()
     context=(ss["page"],ss["mode"],ss["selected_symbol"],ss["density"],ss["number_format"])
     interval="1s" if ss["page"]=="Replay" else "5s" if ss["mode"]=="LIVE" else None
-    if ss["page"]=="Simulator":
-        with st.container(key="lg_exec_shell"):
-            sidebar,body=st.columns([236,1436],gap="small")
-            with sidebar: components.execution_sidebar(st,ss)
-            with body:
-                components.execution_topbar(st,ss,universe)
-                st.markdown('<div class="lg-execution-lab"></div>',unsafe_allow_html=True)
-                st.fragment(run_every=interval)(workspace)(st,ss,universe,context,True)
-    else:
-        components.header(st,ss); components.controls(st,ss,universe)
-        st.fragment(run_every=interval)(workspace)(st,ss,universe,context)
+    components.header(st,ss); components.controls(st,ss,universe)
+    st.fragment(run_every=interval)(workspace)(st,ss,universe,context)
 
 
 if __name__=="__main__": main()
