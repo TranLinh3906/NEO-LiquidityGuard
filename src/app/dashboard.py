@@ -111,10 +111,7 @@ def main():
                 st.fragment(run_every=interval)(workspace)(st,ss,universe,context,True)
     else:
         components.header(st,ss); components.controls(st,ss,universe)
-        rail,content=st.columns([.55,12],gap="small")
-        with rail: components.navrail(st,ss)
-        with content:
-            st.fragment(run_every=interval)(workspace)(st,ss,universe,context)
+        st.fragment(run_every=interval)(workspace)(st,ss,universe,context)
 
 
 if __name__=="__main__": main()

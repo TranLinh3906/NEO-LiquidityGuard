@@ -60,13 +60,6 @@ def header(st, ss):
         st.selectbox("Điều hướng",state.PAGES,key="mobile_page",on_change=lambda:state.navigate(ss,ss["mobile_page"]),label_visibility="collapsed")
 
 
-def navrail(st, ss):
-    with st.container(key="lg_navrail"):
-        symbols = ["⌂", "∿", "▷", "↶", "▥", "♧", "⚙"]
-        for page, glyph in zip(state.PAGES, symbols):
-            st.button(glyph, help=page, key=f"rail_{page}", width="stretch", type="primary" if ss["page"] == page else "tertiary", on_click=state.navigate, args=(ss,page))
-
-
 def controls(st, ss, universe):
     all_symbols = list(dict.fromkeys(row["symbol"] for row in universe)) or list(VN30_SYMBOLS)
     capture_date = universe[0].get("capture_date", "—") if universe else "—"
