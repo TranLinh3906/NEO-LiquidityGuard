@@ -195,7 +195,7 @@ def replay(st,ss,vm,rows,status):
         cols[2].select_slider("Tốc độ · snapshot/giây",[1,2,5,10],key="replay_speed")
         st.write("Snapshot đang chọn:",vm["snapshot_id"])
         st.caption(local_time((vm["quote"] or {}).get("quote_time_vn"))+" UTC+7")
-        st.button("Dùng snapshot này trong Simulator",key="replay_to_sim",on_click=state.navigate,args=(ss,"Simulator"))
+        st.button("Dùng snapshot này trên Dashboard",key="replay_to_sim",on_click=state.navigate,args=(ss,"Dashboard"))
     compare(st,ss,rows,status,prefix="replay")
 
 
@@ -398,7 +398,7 @@ def alerts(st,ss,vm,rows,status):
         fields={"Provider":q.get("provider"),"Source":q.get("source"),"Mode":ss["mode"],"Snapshot ID":vm["snapshot_id"],"Raw event ID":q.get("raw_event_id"),"Quote timestamp UTC+7":local_time(q.get("quote_time_vn")),"Quote age · giây":fmt(vm["trust"]["age_seconds"]),"Đơn vị giá":q.get("price_unit"),"Đơn vị khối lượng":q.get("quantity_unit"),"Bằng chứng đơn vị":q.get("unit_evidence_ref"),"Market phase":q.get("market_phase") or "UNKNOWN","Phase source":q.get("market_phase_source") or "UNKNOWN","Book integrity":q.get("is_valid_book"),"Snapshot hoàn chỉnh verified":q.get("complete_book_verified"),"Collector":status.get("state"),"Cập nhật WS UTC+7":local_time(status.get("updated_at_utc"))}
         st.dataframe([{"Điều kiện":k,"Giá trị":str(v) if v is not None else "UNKNOWN"} for k,v in fields.items()],hide_index=True,width="stretch")
         cols=st.columns(2)
-        cols[0].button("Mở mô phỏng snapshot liên quan",key="alert_simulator",on_click=state.navigate,args=(ss,"Simulator"))
+        cols[0].button("Mở mô phỏng trên Dashboard",key="alert_simulator",on_click=state.navigate,args=(ss,"Dashboard"))
         cols[1].button("Xem lịch sử liên quan",key="alert_replay",on_click=state.navigate,args=(ss,"Replay"))
         if q.get("quality_flags"): st.caption("Quality flags: "+", ".join(q["quality_flags"]))
         qa=ROOT/"outputs/qa/data_quality.json"

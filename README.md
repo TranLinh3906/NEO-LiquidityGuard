@@ -90,18 +90,14 @@ be hidden with the availability toggle. Refresh with:
 PYTHONPATH=src python -m ssi_api.market_catalog_collect
 ```
 
-Open http://localhost:8503 for the restored multi-page dashboard, or
-**http://localhost:8503/?view=simulator** for Execution Lab. The default mode is
+Open http://localhost:8503 for the restored multi-page dashboard. The default mode is
 **REPLAY** and the public UI exposes only LIVE/REPLAY. Change the symbol through
 the search/filter bar or Watchlist. The seven pages are Dashboard,
-Market Pulse, Simulator, Replay, Charts, Alerts and Settings. They share symbol,
+Market Pulse, Replay, Charts, So sánh mã, Alerts and Settings. They share symbol,
 mode, date/snapshot, BUY/SELL and quantity. The Replay page selects only dates
-actually stored, with Play/Pause/speed and A/B comparison. Simulator exports
-JSON/CSV with provider, mode, symbol, snapshot, quote time, side, Q, filled,
-unfilled, VWAP, coverage, impact and validation evidence. The page follows
-`docs/ui_reference/REFERENCE_EXECUTION_LAB_MASCOT.png`; its sidebar, topbar,
-hero, controls, result/insight strips, 3+2 charts and right rail are scoped to
-Simulator so the other six restored pages keep their prior layout.
+actually stored, with Play/Pause/speed and A/B comparison. Dashboard contains
+the read-only three-level simulation, coverage, VWAP and execution-impact flow.
+All pages use one shared navigation and workspace shell.
 
 The UI reads canonical SSI quotes and collector status independently of the
 collector. LIVE is refreshed every five seconds and stays blocked when offline,

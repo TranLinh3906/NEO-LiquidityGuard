@@ -42,7 +42,7 @@ def header(st, ss):
         cols = st.columns([2.3, 8.8, 1.9], gap="small")
         cols[0].markdown('<div class="lg-brand">LiquidityGuard</div>', unsafe_allow_html=True)
         with cols[1]:
-            tabs = st.columns([1.15,1.3,1.0,.85,.75,1.1,.75,.9], gap="small")
+            tabs = st.columns([1.15,1.3,.85,.75,1.1,.75,.9], gap="small")
             for col, page, ico in zip(tabs, state.PAGES, state.ICONS):
                 col.button(page, key=f"nav_{page}", type="primary" if ss["page"] == page else "tertiary", on_click=state.navigate, args=(ss,page), width="stretch")
         cols[2].markdown(f'<div class="lg-greeting">Xin chào, nhà đầu tư 👋<br><small>{datetime.now(VN):%d/%m · %H:%M} UTC+7 · SSI</small></div>', unsafe_allow_html=True)
@@ -150,7 +150,7 @@ def chart_card(st, title, key, fig=None, help_text=None):
 def right_rail(st,ss,vm,rows,status,universe):
     with st.container(key="lg_card_quick"):
         st.markdown('<div class="lg-section-title">ϟ Quick Tasks</div>',unsafe_allow_html=True)
-        st.button("▷  Mô phỏng mới  ›",key="quick_simulate",width="stretch",on_click=state.navigate,args=(ss,"Simulator"))
+        st.button("▷  Mô phỏng trên Dashboard  ›",key="quick_simulate",width="stretch",on_click=state.navigate,args=(ss,"Dashboard"))
         def replay():
             state.change_mode(ss,"REPLAY"); state.navigate(ss,"Replay")
         st.button("↶  Phát lại một phiên  ›",key="quick_replay",width="stretch",on_click=replay)
@@ -215,7 +215,6 @@ def execution_sidebar(st, ss):
         )
         entries = [
             ("⌂", "Tổng quan", "Dashboard"),
-            ("⌁", "Mô phỏng lệnh", "Simulator"),
             ("▷", "Replay phiên", "Replay"),
             ("▥", "So sánh mã", "Charts"),
             ("♧", "Data Trust", "Alerts"),

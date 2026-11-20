@@ -49,10 +49,6 @@ def workspace(st,ss,universe,context):
     if ss["page"]=="Market Pulse":badge=f"THỊ TRƯỜNG · SSI REST thực đã lưu · Chế độ mô phỏng L3: {ss['mode']}"
     st.markdown(f'<div class="lg-mode-banner">◉ {badge} · {ss["selected_symbol"]}</div>',unsafe_allow_html=True)
     if ss["page"]!="Dashboard": components.mode_control(st,ss)
-    if ss["page"]=="Simulator":
-        pages.simulator(st,ss,vm,rows,status,universe)
-        st.markdown('<div class="lg-footer">LiquidityGuard · Gen Z Liquidity Intelligence · Mô phỏng giả định trong ba mức giá · Chỉ đọc dữ liệu thị trường</div>',unsafe_allow_html=True)
-        return
     main_col,right=st.columns([3.25,1],gap="small")
     with main_col:
         page=ss["page"]
@@ -71,12 +67,14 @@ def main():
     import streamlit as st
     st.set_page_config(page_title="LiquidityGuard · Liquidity Intelligence",page_icon="🦝",layout="wide",initial_sidebar_state="collapsed")
     ss=st.session_state; state.init(ss)
+    if ss.get("page") not in state.PAGES:
+        ss["page"]="Dashboard"
     if ss.get("mode") not in {"LIVE","REPLAY"}:
         state.change_mode(ss,"REPLAY")
     if not ss.get("view_applied"):
         requested=st.query_params.get("view","")
         if requested=="market":ss["page"]="Market Pulse"
-        if requested=="simulator":ss["page"]="Simulator"
+        if requested=="simulator":ss["page"]="Dashboard"
         ss["view_applied"]=True
     if "pending_preferences" in ss: ss.update(ss.pop("pending_preferences"))
     components.NUMBER_FORMAT.set(ss["number_format"])
