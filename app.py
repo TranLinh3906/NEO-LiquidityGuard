@@ -10,12 +10,16 @@ SRC = ROOT / "src"
 if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
+# ``app.py`` is the deployment entrypoint while ``src/app`` is the real
+# package.  Expose its search path so importing ``app.universe`` from the
+# repository root remains valid instead of being shadowed by this file.
+__path__ = [str(SRC / "app")]
+if __spec__ is not None:
+    __spec__.submodule_search_locations = __path__
+
 
 def main() -> None:
-    """Load the packaged dashboard without letting this file shadow it."""
-    current = sys.modules.get(__name__)
-    if sys.modules.get("app") is current and not hasattr(current, "__path__"):
-        del sys.modules["app"]
+    """Load the packaged dashboard."""
     from app.dashboard import main as dashboard_main
 
     dashboard_main()

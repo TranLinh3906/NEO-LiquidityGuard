@@ -32,3 +32,18 @@ def test_dashboard_universe_is_limited_to_latest_capture(tmp_path):
     assert [row["symbol"] for row in scoped] == ["AAA", "FPT"]
     assert all(row["capture_scope_size"] == 2 for row in scoped)
     assert all(row["capture_date"] == "2026-11-19" for row in scoped)
+
+
+def test_cloud_universe_falls_back_to_capture_and_coverage_without_raw(tmp_path):
+    capture = {"provider": "SSI", "checked_at_utc": "2026-11-20T05:53:24Z", "symbols": ["FPT", "ACV"]}
+    (tmp_path / "ssi_capture_afternoon.json").write_text(json.dumps(capture))
+    (tmp_path / "coverage_report.csv").write_text(
+        "trade_date,symbol,board\n2026/11/20,FPT,HOSE\n2026/11/20,ACV,UPCOM\n"
+    )
+
+    scoped = restrict_to_latest_capture([], tmp_path)
+
+    assert [row["symbol"] for row in scoped] == ["FPT", "ACV"]
+    assert [row["board"] for row in scoped] == ["HOSE", "UPCOM"]
+    assert all(row["sector"] == "UNCLASSIFIED" for row in scoped)
+    assert all(row["sector_source"] == "CAPTURE_REPORT_ONLY" for row in scoped)

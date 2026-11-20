@@ -124,16 +124,54 @@ def restrict_to_latest_capture(
     ordered = list(dict.fromkeys(str(symbol).strip().upper() for symbol in capture["symbols"] if str(symbol).strip()))
     by_symbol = {row["symbol"]: row for row in rows}
     capture_date = checked_at[:10]
+    # Streamlit Cloud intentionally does not receive the multi-gigabyte RAW
+    # masterdata directory.  The committed capture report remains the source
+    # of scope, while the committed coverage report can restore only the
+    # observed exchange label.  Missing company/sector metadata stays explicit
+    # and is never invented.
+    board_by_symbol: dict[str, str] = {}
+    coverage_path = Path(reports_root) / "coverage_report.csv"
+    if coverage_path.is_file():
+        try:
+            with coverage_path.open(newline="", encoding="utf-8-sig") as handle:
+                for row in csv.DictReader(handle):
+                    day = str(row.get("trade_date") or "").replace("/", "-")
+                    board = str(row.get("board") or "").upper()
+                    symbol = str(row.get("symbol") or "").upper()
+                    if day == capture_date and symbol and board in EQUITY_BOARDS:
+                        board_by_symbol[symbol] = board
+        except (OSError, csv.Error):
+            board_by_symbol = {}
+
+    def captured_row(symbol: str) -> dict[str, Any]:
+        if symbol in by_symbol:
+            return by_symbol[symbol]
+        board = board_by_symbol.get(symbol, "UNKNOWN")
+        return {
+            "symbol": symbol,
+            "board": board,
+            "board_label": BOARD_LABELS.get(board, board),
+            "sector": "UNCLASSIFIED",
+            "sector_source": "CAPTURE_REPORT_ONLY",
+            "company_name": None,
+            "stock_type": "Stock",
+            "icb_code": None,
+            "icb_sector": None,
+            "index_group": "VN30" if symbol in VN30_SYMBOLS else None,
+            "index_as_of": VN30_AS_OF if symbol in VN30_SYMBOLS else None,
+            "trading_date": capture_date.replace("-", "/"),
+            "ref_price": None,
+        }
+
     return [
         {
-            **by_symbol[symbol],
+            **captured_row(symbol),
             "capture_date": capture_date,
             "capture_checked_at_utc": checked_at,
             "capture_report": source_path.name,
             "capture_scope_size": len(ordered),
         }
         for symbol in ordered
-        if symbol in by_symbol
     ]
 
 
