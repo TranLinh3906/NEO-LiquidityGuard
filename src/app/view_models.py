@@ -68,10 +68,19 @@ def synthetic_quotes(symbol):
     return rows
 
 
+def resolve_quote_database(mode, database=None):
+    if database is not None:
+        return Path(database)
+    primary = ROOT / "data/processed/quotes.sqlite"
+    if primary.exists() or mode != "REPLAY":
+        return primary
+    return ROOT / "data_sample/ssi_compact_replay.sqlite"
+
+
 def load_quotes(mode, symbol, database=None):
     if mode == "SYNTHETIC_TEST":
         return synthetic_quotes(symbol)
-    path = Path(database or ROOT / "data/processed/quotes.sqlite")
+    path = resolve_quote_database(mode, database)
     if not path.exists():
         return []
     with sqlite3.connect(f"file:{path}?mode=ro", uri=True) as connection:

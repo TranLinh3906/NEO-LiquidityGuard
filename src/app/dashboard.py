@@ -56,7 +56,8 @@ def workspace(st,ss,universe,context,execution_layout=False):
     if execution_layout:
         pages.simulator(st,ss,vm,rows,status,universe)
         return
-    badge="SYNTHETIC_TEST · Dữ liệu giả lập để thử công thức và giao diện" if ss["mode"]=="SYNTHETIC_TEST" else f"{ss['mode']} · {vm['trust']['label']} · SSI FastConnect · WS {status.get('state','offline').upper()}"
+    compact_label=" · COMPACT SSI REPLAY" if (quote or {}).get("replay_bundle")=="COMPACT_SSI_REPLAY" else ""
+    badge="SYNTHETIC_TEST · Dữ liệu giả lập để thử công thức và giao diện" if ss["mode"]=="SYNTHETIC_TEST" else f"{ss['mode']} · {vm['trust']['label']}{compact_label} · SSI FastConnect · WS {status.get('state','offline').upper()}"
     if ss["page"]=="Market Pulse":badge=f"THỊ TRƯỜNG · SSI REST thực đã lưu · Chế độ mô phỏng L3: {ss['mode']}"
     st.markdown(f'<div class="lg-mode-banner">◉ {badge} · {ss["selected_symbol"]}</div>',unsafe_allow_html=True)
     if ss["page"] not in {"Dashboard","Simulator"}: components.mode_control(st,ss)

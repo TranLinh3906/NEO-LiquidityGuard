@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0",
+  "bundle": "COMPACT_SSI_REPLAY",
+  "generated_at_utc": "2026-11-20T12:10:08Z",
+  "provider": "SSI",
+  "source": "SSI_FASTCONNECT",
+  "display_mode": "REPLAY",
+  "original_source_mode": "LIVE",
+  "capture_report": "ssi_capture_afternoon_20261120_230symbols.json",
+  "trade_dates": [
+    "2026/11/19",
+    "2026/11/20"
+  ],
+  "requested_symbol_count": 230,
+  "observed_symbol_count": 230,
+  "symbols_without_rows": [],
+  "samples_per_symbol_per_day": 12,
+  "row_count": 4160,
+  "simulatable_rows": 4145,
+  "observation_only_rows": 15,
+  "per_date": {
+    "2026/11/19": {
+      "rows": 1997,
+      "simulatable_rows": 1990,
+      "observation_only_rows": 7
+    },
+    "2026/11/20": {
+      "rows": 2163,
+      "simulatable_rows": 2155,
+      "observation_only_rows": 8
+    }
+  },
+  "policy": "Only persisted real SSI LIVE quotes are sampled. No synthetic rows and no market-phase backfill are permitted."
+}

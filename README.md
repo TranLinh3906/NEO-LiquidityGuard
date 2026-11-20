@@ -76,6 +76,9 @@ streamlit run app.py --server.port 8503
 For Streamlit Community Cloud, select this repository, branch `main`, and set
 the main file path to `app.py`. Configure SSI credentials only through
 Streamlit Secrets or the deployment environment; never commit `.env`.
+When the full local SQLite store is unavailable, REPLAY automatically reads
+`data_sample/ssi_compact_replay.sqlite`. Rebuild this labelled, real-SSI-only
+bundle with `PYTHONPATH=src python scripts/build_compact_replay.py --replace`.
 
 Open the full market table at **http://localhost:8503/?view=market**. It lists
 1,517 SSI-classified stocks (410 HOSE, 299 HNX, 808 UPCoM), with company/ICB

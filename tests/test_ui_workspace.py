@@ -12,6 +12,7 @@ from app.view_models import (
     is_observable_book,
     make_view,
     observation_history_points,
+    resolve_quote_database,
     synthetic_quotes,
 )
 
@@ -165,3 +166,15 @@ def test_observable_replay_book_is_not_hidden_when_simulation_gate_is_blocked():
     view = make_view(quote, "REPLAY", {"state": "offline"}, "BUY", 400)
     assert not view["trust"]["allowed"]
     assert view["simulation"] is None
+
+
+def test_replay_uses_compact_cloud_bundle_only_when_primary_store_is_missing(tmp_path, monkeypatch):
+    import app.view_models as view_models
+
+    monkeypatch.setattr(view_models, "ROOT", tmp_path)
+    compact = tmp_path / "data_sample/ssi_compact_replay.sqlite"
+    compact.parent.mkdir(parents=True)
+    compact.touch()
+
+    assert resolve_quote_database("REPLAY") == compact
+    assert resolve_quote_database("LIVE") == tmp_path / "data/processed/quotes.sqlite"
