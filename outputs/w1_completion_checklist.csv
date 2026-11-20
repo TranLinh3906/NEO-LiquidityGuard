@@ -1,0 +1,9 @@
+﻿task_id,deliverable,required_content,current_status,next_action
+W1.01,docs/problem_statement.md,"Persona, vấn đề, giá trị và scope boundary giữ nguyên; nguồn đổi sang SSI",Updated SSI-only,Review final wording
+W1.02,docs/scope_mvp.md,"P0/P1/out-of-scope; SSI-only; UI; timezone; safety",Updated v2.0,Lock with W2-W7
+W1.03,docs/rubric_traceability.csv; docs/assignment_requirements.md,"Đối chiếu rubric gốc và quyết định chấp thuận Phương án A",Updated with SSI substitution decision,Attach external approval evidence if required
+W1.04,docs/api_inventory.md,"SSI auth; securities info/summary; master data; Quote/MarketFlag streaming; read-only allow-list",Official SSI docs reviewed; credentials required,W2 attach LIVE raw captures
+W1.05,docs/data_contract_w2_w3.md,"provider/source/mode/transport; SSI QuoteMessage mapping; time/unit/completeness verification",Updated v2.0-draft,"W2/W3 verify units, phase join and snapshot semantics using LIVE raw"
+W1.06,docs/finance_spec.md,"Spread, depth, OBI, BUY/SELL, partial fill, VWAP, slippage, examples",Drafted with synthetic examples,W4 implement Decimal and unit tests
+W1.07,docs/acceptance_criteria.md,"Normal, over-depth, disconnect/replay, ATO/ATC, partial, phase, sessions/timezone",Drafted,W6 run and attach pass/fail evidence
+W1.08,docs/risk_register.md,"SSI API key, quote scope, unit, incomplete data/snapshot, stale, rate limit and safety",Updated SSI-only,Update status using LIVE evidence

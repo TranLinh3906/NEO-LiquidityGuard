@@ -1,0 +1,1672 @@
+{
+  "source": "SSI_FASTCONNECT",
+  "daily_bar_count": 12460,
+  "intraday_1m_bar_count": 355425,
+  "price_volume_value_by_symbol": [
+    {
+      "symbol": "FPT",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 44742.513,
+      "high": 119372.734,
+      "low": 34180.293,
+      "close": 46950,
+      "price_change": 2207.487000000001,
+      "price_change_pct": 4.933757297002967,
+      "total_volume": 5777552100.0,
+      "total_value": 451762125345436.7,
+      "average_bar_volume": 4636879.695024077,
+      "average_bar_value": 362569924033.2558
+    },
+    {
+      "symbol": "HPG",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 26307.552,
+      "high": 27540.912,
+      "low": 7980.281,
+      "close": 20450,
+      "price_change": -5857.552,
+      "price_change_pct": -22.265667288237232,
+      "total_volume": 34526538800.0,
+      "total_value": 700148785635778.0,
+      "average_bar_volume": 27709902.72873194,
+      "average_bar_value": 561917163431.6035
+    },
+    {
+      "symbol": "MBB",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 10375.867,
+      "high": 23627.42,
+      "low": 5726.84,
+      "close": 18800,
+      "price_change": 8424.133,
+      "price_change_pct": 81.18967793245615,
+      "total_volume": 20033465100.0,
+      "total_value": 298147348901570.3,
+      "average_bar_volume": 16078222.39165329,
+      "average_bar_value": 239283586598.37103
+    },
+    {
+      "symbol": "MWG",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 64668.365,
+      "high": 91728.665,
+      "low": 31931.301,
+      "close": 72600,
+      "price_change": 7931.635000000002,
+      "price_change_pct": 12.26509283171146,
+      "total_volume": 7294466000.0,
+      "total_value": 436996882007180.5,
+      "average_bar_volume": 5854306.58105939,
+      "average_bar_value": 350719808994.5269
+    },
+    {
+      "symbol": "SSI",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 23318.685,
+      "high": 31525.967,
+      "low": 6959.677,
+      "close": 19550,
+      "price_change": -3768.6850000000013,
+      "price_change_pct": -16.161653197854,
+      "total_volume": 27239547900.0,
+      "total_value": 526716701928298.1,
+      "average_bar_volume": 21861595.425361156,
+      "average_bar_value": 422726085014.6855
+    },
+    {
+      "symbol": "TCB",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 16039.625,
+      "high": 27424.571,
+      "low": 5953.168,
+      "close": 20750,
+      "price_change": 4710.375,
+      "price_change_pct": 29.36711425610013,
+      "total_volume": 13486783900.0,
+      "total_value": 237557794530604.2,
+      "average_bar_volume": 10824064.125200642,
+      "average_bar_value": 190656335899.3613
+    },
+    {
+      "symbol": "VCB",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 42436.496,
+      "high": 78145.96,
+      "low": 34572.002,
+      "close": 50800,
+      "price_change": 8363.504,
+      "price_change_pct": 19.70828128693755,
+      "total_volume": 3679668700.0,
+      "total_value": 217934499585561.8,
+      "average_bar_volume": 2953185.1524879616,
+      "average_bar_value": 174907303038.1716
+    },
+    {
+      "symbol": "VIC",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 48500,
+      "high": 265000.0,
+      "low": 19350.0,
+      "close": 245000,
+      "price_change": 196500.0,
+      "price_change_pct": 405.1546391752577,
+      "total_volume": 4685595300.0,
+      "total_value": 327317080315000.0,
+      "average_bar_volume": 3760509.871589085,
+      "average_bar_value": 262694285967.0947
+    },
+    {
+      "symbol": "VNM",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 64454.833,
+      "high": 69948.443,
+      "low": 43931.47,
+      "close": 52000,
+      "price_change": -12454.832999999999,
+      "price_change_pct": -19.323350042657,
+      "total_volume": 4263179900.0,
+      "total_value": 240670785519851.3,
+      "average_bar_volume": 3421492.6966292136,
+      "average_bar_value": 193154723531.18082
+    },
+    {
+      "symbol": "VPB",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 16484.382,
+      "high": 30323.153,
+      "low": 9375.023,
+      "close": 21000,
+      "price_change": 4515.617999999999,
+      "price_change_pct": 27.39331083203482,
+      "total_volume": 23525225500.0,
+      "total_value": 398754219784024.2,
+      "average_bar_volume": 18880598.31460674,
+      "average_bar_value": 320027463711.09485
+    }
+  ],
+  "liquidity_comparison_by_total_value": [
+    {
+      "symbol": "HPG",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 26307.552,
+      "high": 27540.912,
+      "low": 7980.281,
+      "close": 20450,
+      "price_change": -5857.552,
+      "price_change_pct": -22.265667288237232,
+      "total_volume": 34526538800.0,
+      "total_value": 700148785635778.0,
+      "average_bar_volume": 27709902.72873194,
+      "average_bar_value": 561917163431.6035
+    },
+    {
+      "symbol": "SSI",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 23318.685,
+      "high": 31525.967,
+      "low": 6959.677,
+      "close": 19550,
+      "price_change": -3768.6850000000013,
+      "price_change_pct": -16.161653197854,
+      "total_volume": 27239547900.0,
+      "total_value": 526716701928298.1,
+      "average_bar_volume": 21861595.425361156,
+      "average_bar_value": 422726085014.6855
+    },
+    {
+      "symbol": "FPT",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 44742.513,
+      "high": 119372.734,
+      "low": 34180.293,
+      "close": 46950,
+      "price_change": 2207.487000000001,
+      "price_change_pct": 4.933757297002967,
+      "total_volume": 5777552100.0,
+      "total_value": 451762125345436.7,
+      "average_bar_volume": 4636879.695024077,
+      "average_bar_value": 362569924033.2558
+    },
+    {
+      "symbol": "MWG",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 64668.365,
+      "high": 91728.665,
+      "low": 31931.301,
+      "close": 72600,
+      "price_change": 7931.635000000002,
+      "price_change_pct": 12.26509283171146,
+      "total_volume": 7294466000.0,
+      "total_value": 436996882007180.5,
+      "average_bar_volume": 5854306.58105939,
+      "average_bar_value": 350719808994.5269
+    },
+    {
+      "symbol": "VPB",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 16484.382,
+      "high": 30323.153,
+      "low": 9375.023,
+      "close": 21000,
+      "price_change": 4515.617999999999,
+      "price_change_pct": 27.39331083203482,
+      "total_volume": 23525225500.0,
+      "total_value": 398754219784024.2,
+      "average_bar_volume": 18880598.31460674,
+      "average_bar_value": 320027463711.09485
+    },
+    {
+      "symbol": "VIC",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 48500,
+      "high": 265000.0,
+      "low": 19350.0,
+      "close": 245000,
+      "price_change": 196500.0,
+      "price_change_pct": 405.1546391752577,
+      "total_volume": 4685595300.0,
+      "total_value": 327317080315000.0,
+      "average_bar_volume": 3760509.871589085,
+      "average_bar_value": 262694285967.0947
+    },
+    {
+      "symbol": "MBB",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 10375.867,
+      "high": 23627.42,
+      "low": 5726.84,
+      "close": 18800,
+      "price_change": 8424.133,
+      "price_change_pct": 81.18967793245615,
+      "total_volume": 20033465100.0,
+      "total_value": 298147348901570.3,
+      "average_bar_volume": 16078222.39165329,
+      "average_bar_value": 239283586598.37103
+    },
+    {
+      "symbol": "VNM",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 64454.833,
+      "high": 69948.443,
+      "low": 43931.47,
+      "close": 52000,
+      "price_change": -12454.832999999999,
+      "price_change_pct": -19.323350042657,
+      "total_volume": 4263179900.0,
+      "total_value": 240670785519851.3,
+      "average_bar_volume": 3421492.6966292136,
+      "average_bar_value": 193154723531.18082
+    },
+    {
+      "symbol": "TCB",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 16039.625,
+      "high": 27424.571,
+      "low": 5953.168,
+      "close": 20750,
+      "price_change": 4710.375,
+      "price_change_pct": 29.36711425610013,
+      "total_volume": 13486783900.0,
+      "total_value": 237557794530604.2,
+      "average_bar_volume": 10824064.125200642,
+      "average_bar_value": 190656335899.3613
+    },
+    {
+      "symbol": "VCB",
+      "timeframe": "1d",
+      "bar_count": 1246,
+      "first_date": "2021/11/18",
+      "last_date": "2026/11/18",
+      "open": 42436.496,
+      "high": 78145.96,
+      "low": 34572.002,
+      "close": 50800,
+      "price_change": 8363.504,
+      "price_change_pct": 19.70828128693755,
+      "total_volume": 3679668700.0,
+      "total_value": 217934499585561.8,
+      "average_bar_volume": 2953185.1524879616,
+      "average_bar_value": 174907303038.1716
+    }
+  ],
+  "intraday_liquidity_windows_30m": {
+    "FPT": {
+      "highest_value_windows": [
+        {
+          "symbol": "FPT",
+          "time_bucket": "14:00",
+          "volume": 232989600.0,
+          "value": 15916787545000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "13:00",
+          "volume": 182927300.0,
+          "value": 12373630780000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "13:30",
+          "volume": 178679700.0,
+          "value": 12237745320000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "09:30",
+          "volume": 162856100.0,
+          "value": 11068946365000.0,
+          "bars": 4736
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "10:00",
+          "volume": 125938300.0,
+          "value": 8640121695000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "09:00",
+          "volume": 117680700.0,
+          "value": 8005069695000.0,
+          "bars": 2370
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "10:30",
+          "volume": 103648600.0,
+          "value": 7087947190000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "11:00",
+          "volume": 97308100.0,
+          "value": 6597560545000.0,
+          "bars": 4735
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "14:30",
+          "volume": 88845600.0,
+          "value": 6069792200000.0,
+          "bars": 158
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "FPT",
+          "time_bucket": "14:30",
+          "volume": 88845600.0,
+          "value": 6069792200000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "11:00",
+          "volume": 97308100.0,
+          "value": 6597560545000.0,
+          "bars": 4735
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "10:30",
+          "volume": 103648600.0,
+          "value": 7087947190000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "09:00",
+          "volume": 117680700.0,
+          "value": 8005069695000.0,
+          "bars": 2370
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "10:00",
+          "volume": 125938300.0,
+          "value": 8640121695000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "09:30",
+          "volume": 162856100.0,
+          "value": 11068946365000.0,
+          "bars": 4736
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "13:30",
+          "volume": 178679700.0,
+          "value": 12237745320000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "13:00",
+          "volume": 182927300.0,
+          "value": 12373630780000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "FPT",
+          "time_bucket": "14:00",
+          "volume": 232989600.0,
+          "value": 15916787545000.0,
+          "bars": 4740
+        }
+      ]
+    },
+    "HPG": {
+      "highest_value_windows": [
+        {
+          "symbol": "HPG",
+          "time_bucket": "14:00",
+          "volume": 628376300.0,
+          "value": 14730540380000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "13:30",
+          "volume": 519874000.0,
+          "value": 12367029930000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "13:00",
+          "volume": 489485100.0,
+          "value": 11554600220000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "09:30",
+          "volume": 368278400.0,
+          "value": 8828136090000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "10:00",
+          "volume": 359368600.0,
+          "value": 8402475480000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "14:30",
+          "volume": 335434600.0,
+          "value": 7799204535000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "10:30",
+          "volume": 298200200.0,
+          "value": 7022213585000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "09:00",
+          "volume": 269444700.0,
+          "value": 6497884840000.0,
+          "bars": 2370
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "11:00",
+          "volume": 266441100.0,
+          "value": 6228562895000.0,
+          "bars": 4736
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "HPG",
+          "time_bucket": "11:00",
+          "volume": 266441100.0,
+          "value": 6228562895000.0,
+          "bars": 4736
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "09:00",
+          "volume": 269444700.0,
+          "value": 6497884840000.0,
+          "bars": 2370
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "10:30",
+          "volume": 298200200.0,
+          "value": 7022213585000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "14:30",
+          "volume": 335434600.0,
+          "value": 7799204535000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "10:00",
+          "volume": 359368600.0,
+          "value": 8402475480000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "09:30",
+          "volume": 368278400.0,
+          "value": 8828136090000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "13:00",
+          "volume": 489485100.0,
+          "value": 11554600220000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "13:30",
+          "volume": 519874000.0,
+          "value": 12367029930000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "HPG",
+          "time_bucket": "14:00",
+          "volume": 628376300.0,
+          "value": 14730540380000.0,
+          "bars": 4740
+        }
+      ]
+    },
+    "MBB": {
+      "highest_value_windows": [
+        {
+          "symbol": "MBB",
+          "time_bucket": "14:00",
+          "volume": 404482300.0,
+          "value": 9262155285000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "13:30",
+          "volume": 305650900.0,
+          "value": 7037697650000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "13:00",
+          "volume": 296446100.0,
+          "value": 6855421015000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "10:00",
+          "volume": 205277000.0,
+          "value": 4734077130000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "09:30",
+          "volume": 200267900.0,
+          "value": 4642392545000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "10:30",
+          "volume": 181152500.0,
+          "value": 4192954785000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "11:00",
+          "volume": 175828500.0,
+          "value": 4033170755000.0,
+          "bars": 4730
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "14:30",
+          "volume": 156750600.0,
+          "value": 3533590975000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "09:00",
+          "volume": 133613600.0,
+          "value": 3098835090000.0,
+          "bars": 2369
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "MBB",
+          "time_bucket": "09:00",
+          "volume": 133613600.0,
+          "value": 3098835090000.0,
+          "bars": 2369
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "14:30",
+          "volume": 156750600.0,
+          "value": 3533590975000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "11:00",
+          "volume": 175828500.0,
+          "value": 4033170755000.0,
+          "bars": 4730
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "10:30",
+          "volume": 181152500.0,
+          "value": 4192954785000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "09:30",
+          "volume": 200267900.0,
+          "value": 4642392545000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "10:00",
+          "volume": 205277000.0,
+          "value": 4734077130000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "13:00",
+          "volume": 296446100.0,
+          "value": 6855421015000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "13:30",
+          "volume": 305650900.0,
+          "value": 7037697650000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "MBB",
+          "time_bucket": "14:00",
+          "volume": 404482300.0,
+          "value": 9262155285000.0,
+          "bars": 4740
+        }
+      ]
+    },
+    "MWG": {
+      "highest_value_windows": [
+        {
+          "symbol": "MWG",
+          "time_bucket": "14:00",
+          "volume": 112453700.0,
+          "value": 8661347220000.0,
+          "bars": 4720
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "13:30",
+          "volume": 85634400.0,
+          "value": 6593864670000.0,
+          "bars": 4717
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "13:00",
+          "volume": 84922800.0,
+          "value": 6534166230000.0,
+          "bars": 4700
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "14:30",
+          "volume": 72211200.0,
+          "value": 5524179820000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "09:30",
+          "volume": 70481700.0,
+          "value": 5489897570000.0,
+          "bars": 4651
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "10:00",
+          "volume": 59814000.0,
+          "value": 4616823180000.0,
+          "bars": 4632
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "10:30",
+          "volume": 54909600.0,
+          "value": 4232446900000.0,
+          "bars": 4614
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "09:00",
+          "volume": 52981300.0,
+          "value": 4125565380000.0,
+          "bars": 2323
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "11:00",
+          "volume": 46953500.0,
+          "value": 3603854150000.0,
+          "bars": 4573
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "MWG",
+          "time_bucket": "11:00",
+          "volume": 46953500.0,
+          "value": 3603854150000.0,
+          "bars": 4573
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "09:00",
+          "volume": 52981300.0,
+          "value": 4125565380000.0,
+          "bars": 2323
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "10:30",
+          "volume": 54909600.0,
+          "value": 4232446900000.0,
+          "bars": 4614
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "10:00",
+          "volume": 59814000.0,
+          "value": 4616823180000.0,
+          "bars": 4632
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "09:30",
+          "volume": 70481700.0,
+          "value": 5489897570000.0,
+          "bars": 4651
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "14:30",
+          "volume": 72211200.0,
+          "value": 5524179820000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "13:00",
+          "volume": 84922800.0,
+          "value": 6534166230000.0,
+          "bars": 4700
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "13:30",
+          "volume": 85634400.0,
+          "value": 6593864670000.0,
+          "bars": 4717
+        },
+        {
+          "symbol": "MWG",
+          "time_bucket": "14:00",
+          "volume": 112453700.0,
+          "value": 8661347220000.0,
+          "bars": 4720
+        }
+      ]
+    },
+    "SSI": {
+      "highest_value_windows": [
+        {
+          "symbol": "SSI",
+          "time_bucket": "14:00",
+          "volume": 580463900.0,
+          "value": 13871325940000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "13:00",
+          "volume": 454107600.0,
+          "value": 10831544830000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "13:30",
+          "volume": 439631900.0,
+          "value": 10467353790000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "09:30",
+          "volume": 342997600.0,
+          "value": 8205826575000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "10:00",
+          "volume": 295230700.0,
+          "value": 7008331845000.0,
+          "bars": 4738
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "09:00",
+          "volume": 261032900.0,
+          "value": 6300446930000.0,
+          "bars": 2370
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "10:30",
+          "volume": 248852300.0,
+          "value": 5961545855000.0,
+          "bars": 4736
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "11:00",
+          "volume": 235526500.0,
+          "value": 5657695580000.0,
+          "bars": 4733
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "14:30",
+          "volume": 199223400.0,
+          "value": 4748952075000.0,
+          "bars": 158
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "SSI",
+          "time_bucket": "14:30",
+          "volume": 199223400.0,
+          "value": 4748952075000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "11:00",
+          "volume": 235526500.0,
+          "value": 5657695580000.0,
+          "bars": 4733
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "10:30",
+          "volume": 248852300.0,
+          "value": 5961545855000.0,
+          "bars": 4736
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "09:00",
+          "volume": 261032900.0,
+          "value": 6300446930000.0,
+          "bars": 2370
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "10:00",
+          "volume": 295230700.0,
+          "value": 7008331845000.0,
+          "bars": 4738
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "09:30",
+          "volume": 342997600.0,
+          "value": 8205826575000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "13:30",
+          "volume": 439631900.0,
+          "value": 10467353790000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "13:00",
+          "volume": 454107600.0,
+          "value": 10831544830000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "SSI",
+          "time_bucket": "14:00",
+          "volume": 580463900.0,
+          "value": 13871325940000.0,
+          "bars": 4739
+        }
+      ]
+    },
+    "TCB": {
+      "highest_value_windows": [
+        {
+          "symbol": "TCB",
+          "time_bucket": "14:00",
+          "volume": 389727300.0,
+          "value": 12218501335000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "13:30",
+          "volume": 333560500.0,
+          "value": 10483750880000.0,
+          "bars": 4736
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "13:00",
+          "volume": 297743800.0,
+          "value": 9350874645000.0,
+          "bars": 4732
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "09:30",
+          "volume": 246316500.0,
+          "value": 7693298850000.0,
+          "bars": 4726
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "14:30",
+          "volume": 224777000.0,
+          "value": 7015756680000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "10:00",
+          "volume": 216435100.0,
+          "value": 6755248995000.0,
+          "bars": 4732
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "10:30",
+          "volume": 191949600.0,
+          "value": 6025863060000.0,
+          "bars": 4716
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "09:00",
+          "volume": 176498400.0,
+          "value": 5534537700000.0,
+          "bars": 2366
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "11:00",
+          "volume": 176171200.0,
+          "value": 5488187645000.0,
+          "bars": 4705
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "TCB",
+          "time_bucket": "11:00",
+          "volume": 176171200.0,
+          "value": 5488187645000.0,
+          "bars": 4705
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "09:00",
+          "volume": 176498400.0,
+          "value": 5534537700000.0,
+          "bars": 2366
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "10:30",
+          "volume": 191949600.0,
+          "value": 6025863060000.0,
+          "bars": 4716
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "10:00",
+          "volume": 216435100.0,
+          "value": 6755248995000.0,
+          "bars": 4732
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "14:30",
+          "volume": 224777000.0,
+          "value": 7015756680000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "09:30",
+          "volume": 246316500.0,
+          "value": 7693298850000.0,
+          "bars": 4726
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "13:00",
+          "volume": 297743800.0,
+          "value": 9350874645000.0,
+          "bars": 4732
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "13:30",
+          "volume": 333560500.0,
+          "value": 10483750880000.0,
+          "bars": 4736
+        },
+        {
+          "symbol": "TCB",
+          "time_bucket": "14:00",
+          "volume": 389727300.0,
+          "value": 12218501335000.0,
+          "bars": 4737
+        }
+      ]
+    },
+    "VCB": {
+      "highest_value_windows": [
+        {
+          "symbol": "VCB",
+          "time_bucket": "14:00",
+          "volume": 151702400.0,
+          "value": 9035169160000.0,
+          "bars": 4736
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "13:30",
+          "volume": 122090700.0,
+          "value": 7253163070000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "13:00",
+          "volume": 118419400.0,
+          "value": 7033363950000.0,
+          "bars": 4735
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "10:00",
+          "volume": 104533500.0,
+          "value": 6293449680000.0,
+          "bars": 4720
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "09:30",
+          "volume": 95254500.0,
+          "value": 5680343410000.0,
+          "bars": 4727
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "10:30",
+          "volume": 73874100.0,
+          "value": 4414176150000.0,
+          "bars": 4709
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "11:00",
+          "volume": 63842000.0,
+          "value": 3806114580000.0,
+          "bars": 4698
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "09:00",
+          "volume": 60064200.0,
+          "value": 3549721080000.0,
+          "bars": 2366
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "14:30",
+          "volume": 58422800.0,
+          "value": 3480855630000.0,
+          "bars": 158
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "VCB",
+          "time_bucket": "14:30",
+          "volume": 58422800.0,
+          "value": 3480855630000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "09:00",
+          "volume": 60064200.0,
+          "value": 3549721080000.0,
+          "bars": 2366
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "11:00",
+          "volume": 63842000.0,
+          "value": 3806114580000.0,
+          "bars": 4698
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "10:30",
+          "volume": 73874100.0,
+          "value": 4414176150000.0,
+          "bars": 4709
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "09:30",
+          "volume": 95254500.0,
+          "value": 5680343410000.0,
+          "bars": 4727
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "10:00",
+          "volume": 104533500.0,
+          "value": 6293449680000.0,
+          "bars": 4720
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "13:00",
+          "volume": 118419400.0,
+          "value": 7033363950000.0,
+          "bars": 4735
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "13:30",
+          "volume": 122090700.0,
+          "value": 7253163070000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "VCB",
+          "time_bucket": "14:00",
+          "volume": 151702400.0,
+          "value": 9035169160000.0,
+          "bars": 4736
+        }
+      ]
+    },
+    "VIC": {
+      "highest_value_windows": [
+        {
+          "symbol": "VIC",
+          "time_bucket": "14:00",
+          "volume": 118781900.0,
+          "value": 25809899550000.0,
+          "bars": 4735
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "14:30",
+          "volume": 89767900.0,
+          "value": 20199264790000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "13:30",
+          "volume": 84419200.0,
+          "value": 18254373700000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "13:00",
+          "volume": 77725700.0,
+          "value": 16778861660000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "09:30",
+          "volume": 51954500.0,
+          "value": 11141213780000.0,
+          "bars": 4728
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "11:00",
+          "volume": 48609300.0,
+          "value": 10504730170000.0,
+          "bars": 4709
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "10:30",
+          "volume": 44876600.0,
+          "value": 9654462040000.0,
+          "bars": 4713
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "10:00",
+          "volume": 44998900.0,
+          "value": 9576356800000.0,
+          "bars": 4710
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "09:00",
+          "volume": 34143100.0,
+          "value": 7254823650000.0,
+          "bars": 2362
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "VIC",
+          "time_bucket": "09:00",
+          "volume": 34143100.0,
+          "value": 7254823650000.0,
+          "bars": 2362
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "10:00",
+          "volume": 44998900.0,
+          "value": 9576356800000.0,
+          "bars": 4710
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "10:30",
+          "volume": 44876600.0,
+          "value": 9654462040000.0,
+          "bars": 4713
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "11:00",
+          "volume": 48609300.0,
+          "value": 10504730170000.0,
+          "bars": 4709
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "09:30",
+          "volume": 51954500.0,
+          "value": 11141213780000.0,
+          "bars": 4728
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "13:00",
+          "volume": 77725700.0,
+          "value": 16778861660000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "13:30",
+          "volume": 84419200.0,
+          "value": 18254373700000.0,
+          "bars": 4740
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "14:30",
+          "volume": 89767900.0,
+          "value": 20199264790000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "VIC",
+          "time_bucket": "14:00",
+          "volume": 118781900.0,
+          "value": 25809899550000.0,
+          "bars": 4735
+        }
+      ]
+    },
+    "VNM": {
+      "highest_value_windows": [
+        {
+          "symbol": "VNM",
+          "time_bucket": "14:00",
+          "volume": 92229000.0,
+          "value": 5475986090000.0,
+          "bars": 4714
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "13:00",
+          "volume": 73543700.0,
+          "value": 4370715190000.0,
+          "bars": 4683
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "13:30",
+          "volume": 68759000.0,
+          "value": 4082614210000.0,
+          "bars": 4701
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "09:30",
+          "volume": 55290100.0,
+          "value": 3295188410000.0,
+          "bars": 4685
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "10:00",
+          "volume": 53187700.0,
+          "value": 3186467270000.0,
+          "bars": 4664
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "10:30",
+          "volume": 48180200.0,
+          "value": 2859207890000.0,
+          "bars": 4624
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "14:30",
+          "volume": 44617600.0,
+          "value": 2645688180000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "11:00",
+          "volume": 44347700.0,
+          "value": 2635986650000.0,
+          "bars": 4595
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "09:00",
+          "volume": 32857700.0,
+          "value": 1958521370000.0,
+          "bars": 2350
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "VNM",
+          "time_bucket": "09:00",
+          "volume": 32857700.0,
+          "value": 1958521370000.0,
+          "bars": 2350
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "11:00",
+          "volume": 44347700.0,
+          "value": 2635986650000.0,
+          "bars": 4595
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "14:30",
+          "volume": 44617600.0,
+          "value": 2645688180000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "10:30",
+          "volume": 48180200.0,
+          "value": 2859207890000.0,
+          "bars": 4624
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "10:00",
+          "volume": 53187700.0,
+          "value": 3186467270000.0,
+          "bars": 4664
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "09:30",
+          "volume": 55290100.0,
+          "value": 3295188410000.0,
+          "bars": 4685
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "13:30",
+          "volume": 68759000.0,
+          "value": 4082614210000.0,
+          "bars": 4701
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "13:00",
+          "volume": 73543700.0,
+          "value": 4370715190000.0,
+          "bars": 4683
+        },
+        {
+          "symbol": "VNM",
+          "time_bucket": "14:00",
+          "volume": 92229000.0,
+          "value": 5475986090000.0,
+          "bars": 4714
+        }
+      ]
+    },
+    "VPB": {
+      "highest_value_windows": [
+        {
+          "symbol": "VPB",
+          "time_bucket": "14:00",
+          "volume": 476133400.0,
+          "value": 12308580565000.0,
+          "bars": 4734
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "13:30",
+          "volume": 373074300.0,
+          "value": 9635726055000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "13:00",
+          "volume": 371814100.0,
+          "value": 9553384570000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "14:30",
+          "volume": 272445100.0,
+          "value": 6998063375000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "10:00",
+          "volume": 230805500.0,
+          "value": 5995959360000.0,
+          "bars": 4712
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "10:30",
+          "volume": 208522800.0,
+          "value": 5399923930000.0,
+          "bars": 4717
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "09:30",
+          "volume": 205124200.0,
+          "value": 5277340935000.0,
+          "bars": 4722
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "11:00",
+          "volume": 194681700.0,
+          "value": 5019471335000.0,
+          "bars": 4716
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "09:00",
+          "volume": 129495600.0,
+          "value": 3362218050000.0,
+          "bars": 2361
+        }
+      ],
+      "lowest_value_windows": [
+        {
+          "symbol": "VPB",
+          "time_bucket": "09:00",
+          "volume": 129495600.0,
+          "value": 3362218050000.0,
+          "bars": 2361
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "11:00",
+          "volume": 194681700.0,
+          "value": 5019471335000.0,
+          "bars": 4716
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "09:30",
+          "volume": 205124200.0,
+          "value": 5277340935000.0,
+          "bars": 4722
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "10:30",
+          "volume": 208522800.0,
+          "value": 5399923930000.0,
+          "bars": 4717
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "10:00",
+          "volume": 230805500.0,
+          "value": 5995959360000.0,
+          "bars": 4712
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "14:30",
+          "volume": 272445100.0,
+          "value": 6998063375000.0,
+          "bars": 158
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "13:00",
+          "volume": 371814100.0,
+          "value": 9553384570000.0,
+          "bars": 4737
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "13:30",
+          "volume": 373074300.0,
+          "value": 9635726055000.0,
+          "bars": 4739
+        },
+        {
+          "symbol": "VPB",
+          "time_bucket": "14:00",
+          "volume": 476133400.0,
+          "value": 12308580565000.0,
+          "bars": 4734
+        }
+      ]
+    }
+  },
+  "note": "OHLCV measures executed trading activity; it does not replace SSI three-level bid/ask history."
+}

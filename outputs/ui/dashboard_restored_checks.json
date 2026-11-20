@@ -1,0 +1,10 @@
+{
+  "page": "Dashboard",
+  "mode": "REPLAY",
+  "navigation_buttons": 7,
+  "mascot_visible": true,
+  "synthetic_option_visible": false,
+  "streamlit_exceptions": [],
+  "plotly_charts": 5,
+  "horizontal_scroll": false
+}

@@ -1,0 +1,16 @@
+HÃY TRIỂN KHAI TRANG MÔ PHỎNG LỆNH (EXECUTION LAB) CỦA LIQUIDITYGUARD DỰA TRÊN HAI TỆP ĐÍNH KÈM:
+- docs/ui_reference/REFERENCE_EXECUTION_LAB_MASCOT.png
+- docs/ui_reference/EXECUTION_LAB_UI_LOCKED_SPEC.md
+
+Tôi chọn CHÍNH XÁC mẫu Execution Lab pastel tím có linh vật gấu mèo này, KHÔNG phải concept nào khác. Bám ảnh về layout/color/card/typography/mascot đến mức tối đa ở viewport 1672×941; chỉ được hiệu chỉnh các số liệu minh họa sai về tài chính.
+
+BƯỚC 1: Đọc toàn bộ đặc tả và kiểm tra repo hiện hành, đặc biệt src/app/{dashboard,pages,components,charts,styles,state,view_models}.py, src/finance và tests; bảo vệ data RAW/SQLite/.env.
+BƯỚC 2: Dựng layout 228px sidebar + 66px header + 986px trung tâm + 415px right rail; vùng chính theo thứ tự Hero mascot → mô phỏng inputs → 5 KPI → diễn giải tự nhiên → Depth/Sweep/Coverage → Spread/OBI → expander; cột phải Watchlist/Session Snapshot/Data Trust. Sử dụng đầy đủ mã màu trong đặc tả, hình mascot riêng; không đặt ảnh screenshot làm background.
+BƯỚC 3: Kết nối controls với cùng `selected_symbol`, `mode`, `date`, `snapshot_id`, `side`, `requested_qty`; không hardcode dữ liệu ví dụ, không để state FPT/VPB lẫn nhau. Điều hướng các nút hoạt động.
+BƯỚC 4: Vẽ 5 Plotly chart từ snapshot SSI đã xác minh hoặc fixture test có nhãn; không lấy OHLCV để tạo Bid/Ask; chỉ mô phỏng 3 mức; `Chưa đáp ứng` chứ không tự gán L4. LIVE/REPLAY/SYNTHETIC_TEST tách biệt và Data Trust chính xác.
+BƯỚC 5: Chụp screenshot 1672x941 so sánh với ảnh reference; chỉnh layout từng vùng, màu/tỉ lệ, chart. Chạy test, kiểm tra 4 kịch bản (valid replay, valid synthetic, no-data, invalid live), tránh Safari crash khi dữ liệu nhiều.
+BƯỚC 6: Báo cáo các file sửa, những gì giữ nguyên, test pass/fail/skip, screenshot trước/sau, hướng dẫn chạy. Không nhận nhiệm vụ hoàn thành khi chỉ có UI skeleton hoặc chỉ CSS đẹp.
+
+PHẢI tuân thủ toàn bộ EXECUTION_LAB_UI_LOCKED_SPEC.md trước khi code. Không cần hỏi tôi lại những lựa chọn đã được chốt trong đặc tả.
+
+ƯU TIÊN VÀ TRÁNH NHẦM: Nếu repo còn `docs/ui_reference/reference_dashboard.png` hoặc `MASTER_SPEC_LIQUIDITYGUARD.md` trước đây với layout khác, KHÔNG dùng làm bố cục trang này. Mẫu mới `REFERENCE_EXECUTION_LAB_MASCOT.png` và spec mới thắng mọi mẫu cũ. Ở repo đã xem, trang này là `src/app/pages.py::simulator(...)`, KHÔNG biến `dashboard(...)` thành Simulator trừ khi xác nhận kiến trúc hiện tại khác.

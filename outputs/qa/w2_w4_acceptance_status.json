@@ -1,0 +1,58 @@
+{
+  "provider": "SSI",
+  "source": "SSI_FASTCONNECT",
+  "policy": "LIVE evidence only; OHLC and synthetic data never satisfy L3 session targets",
+  "issues": {
+    "1_price_unit": {
+      "work_item": "W2.06",
+      "status": "FIXED",
+      "verified_quotes": 1264554,
+      "evidence_ref": "SSI_CUSTOMER_SUPPORT_EMAIL_QUOTE_UNITS_FULL_BOOK_2026-11-19"
+    },
+    "2_quantity_unit": {
+      "work_item": "W2.06",
+      "status": "FIXED",
+      "verified_quotes": 1264554,
+      "evidence_ref": "SSI_CUSTOMER_SUPPORT_EMAIL_QUOTE_UNITS_FULL_BOOK_2026-11-19"
+    },
+    "3_market_phase": {
+      "work_item": "W2.06/W2.07",
+      "status": "PARTIAL_LIVE",
+      "verified_quotes": 159328,
+      "unknown_quotes": 1105226,
+      "rule": "Only a same-board SSI market.flag at-or-before quote time can set phase; no clock backfill."
+    },
+    "4_simulatable_count": {
+      "work_item": "W4",
+      "status": "FIXED",
+      "count": 145972
+    },
+    "5_five_live_sessions": {
+      "work_item": "W3.07",
+      "status": "PENDING_FUTURE_LIVE_SESSIONS",
+      "observed": 4,
+      "required": 5,
+      "remaining": 1
+    },
+    "6_full_session_gap_downtime": {
+      "work_item": "W3.07/W3.09",
+      "status": "FIXED",
+      "coverage_rows": 437,
+      "rows_with_downtime": 437,
+      "total_detected_downtime_gaps": 12770,
+      "full_session_windows": 156
+    },
+    "7_multi_session_live_replay": {
+      "work_item": "W3.08",
+      "status": "FIXED",
+      "session_count": 4,
+      "session_dates": [
+        "2026-11-16",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20"
+      ],
+      "mode": "REPLAY preserving original_source_mode=LIVE"
+    }
+  }
+}

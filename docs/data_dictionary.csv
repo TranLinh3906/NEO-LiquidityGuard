@@ -1,0 +1,46 @@
+field,type,unit,source,required,null_policy,verification,example
+quote_id,string,N/A,W3 deterministic ID,yes,never null,VERIFIED,7a70c8...
+raw_event_id,string,N/A,raw envelope,yes,never null,VERIFIED,evt-ssi-001
+provider,enum,N/A,raw envelope,yes,must equal SSI,VERIFIED,SSI
+source,enum,N/A,raw envelope,yes,must equal SSI_FASTCONNECT,VERIFIED,SSI_FASTCONNECT
+source_type,enum,N/A,raw transport,yes,must be WS for canonical quote,VERIFIED,WS
+source_mode,enum,N/A,raw mode,yes,LIVE or SYNTHETIC_TEST in storage; REPLAY only in replay view,VERIFIED,SYNTHETIC_TEST
+original_source_mode,enum,N/A,replay projection,replay only,never overwrites stored source_mode,VERIFIED,LIVE
+endpoint_or_channel,string,N/A,raw envelope,yes,preserve source topic,OBSERVED,quote.VPB
+connection_id,string,N/A,SSI collector session,no,null allowed for imported sample,OBSERVED,session-001
+sequence_no,integer,N/A,SSI collector,no,null allowed when provider/collector sequence unavailable,OBSERVED,15
+received_at_utc,ISO-8601,UTC,collector,yes,never null,VERIFIED,2026-11-09T03:00:00Z
+quote_time_vn,ISO-8601,Asia/Ho_Chi_Minh,SSI trading_time,no,null and flag when missing,OBSERVED,2026-11-09T10:00:00+07:00
+arrival_delay_seconds,decimal,seconds,W3 derived,no,null when either time cannot be parsed,OBSERVED,0.25
+symbol,string,N/A,SSI QuoteMessage symbol,yes,null means invalid,VERIFIED,VPB
+bid_price_1,decimal,VND_PER_SHARE,SSI bid_prices[0],yes for complete L3,zero means empty and remains missing/flagged,VERIFIED_SSI_SUPPORT,19000
+bid_price_2,decimal,VND_PER_SHARE,SSI bid_prices[1],yes for complete L3,zero means empty and remains missing/flagged,VERIFIED_SSI_SUPPORT,18950
+bid_price_3,decimal,VND_PER_SHARE,SSI bid_prices[2],yes for complete L3,zero means empty and remains missing/flagged,VERIFIED_SSI_SUPPORT,18900
+bid_qty_1,integer,SHARES,SSI bid_volumes[0],yes for complete L3,zero is an empty level when paired with zero price,VERIFIED_SSI_SUPPORT,1000
+bid_qty_2,integer,SHARES,SSI bid_volumes[1],yes for complete L3,zero is an empty level when paired with zero price,VERIFIED_SSI_SUPPORT,900
+bid_qty_3,integer,SHARES,SSI bid_volumes[2],yes for complete L3,zero is an empty level when paired with zero price,VERIFIED_SSI_SUPPORT,800
+ask_price_1,decimal,VND_PER_SHARE,SSI ask_prices[0],yes for complete L3,zero means empty and remains missing/flagged,VERIFIED_SSI_SUPPORT,19050
+ask_price_2,decimal,VND_PER_SHARE,SSI ask_prices[1],yes for complete L3,zero means empty and remains missing/flagged,VERIFIED_SSI_SUPPORT,19100
+ask_price_3,decimal,VND_PER_SHARE,SSI ask_prices[2],yes for complete L3,zero means empty and remains missing/flagged,VERIFIED_SSI_SUPPORT,19150
+ask_qty_1,integer,SHARES,SSI ask_volumes[0],yes for complete L3,zero is an empty level when paired with zero price,VERIFIED_SSI_SUPPORT,1100
+ask_qty_2,integer,SHARES,SSI ask_volumes[1],yes for complete L3,zero is an empty level when paired with zero price,VERIFIED_SSI_SUPPORT,1200
+ask_qty_3,integer,SHARES,SSI ask_volumes[2],yes for complete L3,zero is an empty level when paired with zero price,VERIFIED_SSI_SUPPORT,1300
+market_phase,string,N/A,verified MarketFlag join,no,null remains unknown and blocks simulation,UNVERIFIED,LO
+market_phase_source,string,N/A,SSI market.flag join,no,UNKNOWN until a same-board flag is matched,OBSERVED,SSI_MARKET_FLAG
+market_phase_board,string,N/A,SSI market.flag board,no,null when phase is unknown,OBSERVED,HOSE
+market_phase_received_at,string,UTC,collector receipt of matched flag,no,null when phase is unknown,OBSERVED,2026-11-18T02:15:00Z
+update_type,enum,N/A,W3 array-length classification,yes,FULL_BOOK or PARTIAL_BOOK,VERIFIED,FULL_BOOK
+snapshot_completeness,enum,N/A,W3 structural check,yes,COMPLETE only when all four arrays have at least 3 values,VERIFIED,COMPLETE
+book_level_count,integer,levels,W3 minimum array length,yes,zero when arrays absent,VERIFIED,3
+partial_update_policy,enum,N/A,W3 policy,yes,always PRESERVE_NO_MERGE,VERIFIED,PRESERVE_NO_MERGE
+price_unit,string,N/A,configuration backed by SSI evidence,yes,VND_PER_SHARE after evidence policy,VERIFIED,VND_PER_SHARE
+quantity_unit,string,N/A,configuration backed by SSI evidence,yes,SHARES after evidence policy,VERIFIED,SHARES
+price_multiplier_to_vnd,decimal,N/A,explicit SSI evidence policy,yes,must remain positive,VERIFIED,1
+quantity_multiplier_to_shares,decimal,N/A,explicit SSI evidence policy,yes,must remain positive,VERIFIED,1
+unit_evidence_ref,string,N/A,document/ticket supplied with verified units,yes,missing blocks multiplier promotion,VERIFIED,SSI_CUSTOMER_SUPPORT_EMAIL_QUOTE_UNITS_FULL_BOOK_2026-11-19
+complete_book_verified,boolean,N/A,explicit SSI snapshot confirmation,yes,does not make empty levels executable,VERIFIED,true
+is_stale,boolean,N/A,W3 receive/provider delay check,yes,false when threshold not configured,OBSERVED,false
+is_valid_book,boolean,N/A,W3 validation,yes,false on missing/order/crossed/provenance errors,VERIFIED,true
+is_simulatable,boolean,N/A,W3/W4 gate,yes,false unless units phase completeness freshness and structure pass,VERIFIED,false
+quality_flags,array[string],N/A,W3 validation,yes,empty array when no detected issue,VERIFIED,"[\"UNKNOWN_PRICE_UNIT\"]"
+payload_hash,string,SHA-256,raw envelope,yes,repeated hash is QA signal not delete instruction,VERIFIED,abc123

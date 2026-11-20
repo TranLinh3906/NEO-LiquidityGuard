@@ -1,0 +1,251 @@
+{
+  "sidebar": {
+    "x": 0,
+    "y": 10,
+    "width": 228,
+    "height": 941
+  },
+  "topbar": {
+    "x": 244,
+    "y": 10,
+    "width": 1428,
+    "height": 63
+  },
+  "hero": {
+    "x": 244,
+    "y": 93,
+    "width": 997,
+    "height": 174
+  },
+  "controls": {
+    "x": 244,
+    "y": 270,
+    "width": 997,
+    "height": 62
+  },
+  "results": {
+    "x": 244,
+    "y": 342,
+    "width": 997,
+    "height": 70
+  },
+  "insight": {
+    "x": 244,
+    "y": 406,
+    "width": 997,
+    "height": 88
+  },
+  "chart_row1": {
+    "x": 244,
+    "y": 488,
+    "width": 321.65625,
+    "height": 174
+  },
+  "chart_row2": {
+    "x": 244,
+    "y": 672,
+    "width": 490.5,
+    "height": 152
+  },
+  "formula": {
+    "x": 244,
+    "y": 834,
+    "width": 997,
+    "height": 64
+  },
+  "watchlist": {
+    "x": 1257,
+    "y": 93,
+    "width": 415,
+    "height": 289.78125
+  },
+  "session": {
+    "x": 1257,
+    "y": 392.78125,
+    "width": 415,
+    "height": 188.390625
+  },
+  "trust": {
+    "x": 1257,
+    "y": 591.171875,
+    "width": 415,
+    "height": 166.359375
+  },
+  "computed": {
+    "sidebar": {
+      "background": "rgba(0, 0, 0, 0) linear-gradient(rgb(62, 47, 79), rgb(92, 67, 104)) repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "941px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "topbar": {
+      "background": "rgb(255, 253, 254) none repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "63px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "hero": {
+      "background": "radial-gradient(circle at 82% 80%, rgb(234, 219, 241) 0px, rgba(0, 0, 0, 0) 27%) repeat scroll 0% 0% / auto padding-box border-box, rgba(0, 0, 0, 0) linear-gradient(115deg, rgb(113, 90, 128), rgb(169, 134, 190) 58%, rgb(189, 175, 209)) repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "174px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "controls": {
+      "background": "rgba(0, 0, 0, 0) linear-gradient(105deg, rgb(255, 253, 254), rgb(252, 244, 251)) repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "62px",
+      "marginTop": "9px",
+      "opacity": "1"
+    },
+    "results": {
+      "background": "rgb(254, 249, 254) none repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "70px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "insight": {
+      "background": "rgba(0, 0, 0, 0) linear-gradient(115deg, rgb(255, 242, 247), rgb(248, 233, 240) 62%, rgb(242, 230, 215)) repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "88px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "chart_row1": {
+      "background": "rgb(255, 249, 250) none repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "174px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "chart_row2": {
+      "background": "rgb(255, 249, 250) none repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "152px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "formula": {
+      "background": "rgb(255, 249, 250) none repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "64px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "watchlist": {
+      "background": "rgba(0, 0, 0, 0) linear-gradient(145deg, rgb(255, 253, 254), rgb(255, 245, 247)) repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "289.781px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "session": {
+      "background": "rgba(0, 0, 0, 0) linear-gradient(145deg, rgb(255, 253, 254), rgb(255, 245, 247)) repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "188.391px",
+      "marginTop": "0px",
+      "opacity": "1"
+    },
+    "trust": {
+      "background": "rgba(0, 0, 0, 0) linear-gradient(145deg, rgb(255, 253, 254), rgb(255, 245, 247)) repeat scroll 0% 0% / auto padding-box border-box",
+      "height": "166.359px",
+      "marginTop": "0px",
+      "opacity": "1"
+    }
+  },
+  "viewport": {
+    "width": 1672,
+    "height": 941
+  },
+  "plot_count": 5,
+  "horizontal_scroll": false,
+  "page_errors": [],
+  "chart_depth_nodes": [
+    {
+      "tag": "DIV",
+      "cls": "stVerticalBlock st-key-lg_chart_exec_depth st-emotion-cache-1ndq807 e399r293",
+      "box": {
+        "x": 244,
+        "y": 488,
+        "width": 321.65625,
+        "height": 174,
+        "top": 488,
+        "right": 565.65625,
+        "bottom": 662,
+        "left": 244
+      },
+      "boxSizing": "border-box",
+      "height": "174px",
+      "padding": "10px 12px 5px"
+    }
+  ],
+  "right_rail_text": {
+    "watchlist": "☆ Watchlist của bạn\n\n5 mã\n\nGiá REST đã lưu; trạng thái book theo mode đang chọn.\n\n☆ FPT\n\n46.950\n\nChưa đánh giá\nREST · 2026/11/18\n\n☆ VPB\n\n21.000\n\nChưa đánh giá\nREST · 2026/11/18\n\n☆ SSI\n\n19.550\n\nChưa đánh giá\nREST · 2026/11/18\n\n☆ HPG\n\n20.450\n\nChưa đánh giá\nREST · 2026/11/18\n\n☆ VNM\n\n52.000\n\nChưa đánh giá\nREST · 2026/11/18",
+    "session": "▥ Session Snapshot\n\nTổng quan phạm vi dữ liệu đang chọn\n\nThời gian\n09:13:50 – 14:45:00\nCửa sổ quan sát\n19.870 giây\nAvg. spread\n11,61 bps\nAvg. OBI\n0,264\nSnapshot đạt điều kiện\n4486 / 37499",
+    "trust": "♧ Data Trust\nREPLAY_VALID\n✓ Đơn vị SSI đã xác minh\n✓ Snapshot full-book\n✓ market.flag đúng snapshot\n✓ Raw lineage tồn tại\n✓ Kết nối phù hợp mode\n\nChi tiết Data Trust"
+  },
+  "streamlit_exceptions": [],
+  "session_ancestors": [
+    {
+      "tag": "DIV",
+      "cls": "stVerticalBlock st-key-lg_exec_session st-emotion-cache-1ndq807 e399r293",
+      "height": 188.390625,
+      "overflow": "visible",
+      "visibility": "visible",
+      "display": "flex",
+      "opacity": "1"
+    },
+    {
+      "tag": "DIV",
+      "cls": "st-emotion-cache-1vfi2s9 e399r295",
+      "height": 188.390625,
+      "overflow": "visible",
+      "visibility": "visible",
+      "display": "flex",
+      "opacity": "1"
+    },
+    {
+      "tag": "DIV",
+      "cls": "stVerticalBlock st-emotion-cache-1p8n0nm e399r293",
+      "height": 805,
+      "overflow": "visible",
+      "visibility": "visible",
+      "display": "flex",
+      "opacity": "1"
+    },
+    {
+      "tag": "DIV",
+      "cls": "stColumn st-emotion-cache-zywjnc e399r292",
+      "height": 805,
+      "overflow": "visible",
+      "visibility": "visible",
+      "display": "block",
+      "opacity": "1"
+    },
+    {
+      "tag": "DIV",
+      "cls": "stHorizontalBlock st-emotion-cache-1vhiue3 e399r293",
+      "height": 805,
+      "overflow": "visible",
+      "visibility": "visible",
+      "display": "flex",
+      "opacity": "1"
+    },
+    {
+      "tag": "DIV",
+      "cls": "st-emotion-cache-1vfi2s9 e399r295",
+      "height": 805,
+      "overflow": "visible",
+      "visibility": "visible",
+      "display": "flex",
+      "opacity": "1"
+    },
+    {
+      "tag": "DIV",
+      "cls": "stVerticalBlock st-emotion-cache-1ndq807 e399r293",
+      "height": 805,
+      "overflow": "visible",
+      "visibility": "visible",
+      "display": "flex",
+      "opacity": "1"
+    }
+  ],
+  "paint_probe": {
+    "tag": "DIV",
+    "cls": "st-emotion-cache-1qlqwkb e1yqkw3v0",
+    "text": "Tổng quan phạm vi dữ liệu đang chọn",
+    "html": "<div class=\"st-emotion-cache-1qlqwkb e1yqkw3v0\" data-testid=\"stCaptionContainer\"><p>Tổng quan phạm vi dữ liệu đang chọn</p></div>"
+  }
+}

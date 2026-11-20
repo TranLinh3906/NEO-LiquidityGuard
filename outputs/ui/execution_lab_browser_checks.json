@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "checks": [
+    "1672×941: one LIVE/REPLAY shell, no mascot, right rail and five REPLAY charts",
+    "SELL, quantity and simulation CTA rerun without an exception",
+    "Offline LIVE shows OFFLINE and blocks the simulation CTA",
+    "Returning to REPLAY reloads stored SSI snapshots and five charts"
+  ]
+}

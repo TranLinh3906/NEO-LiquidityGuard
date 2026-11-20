@@ -1,0 +1,21 @@
+/* USE THESE WITH SCOPED .lg-execution-lab ROOT, NOT AS UNBOUNDED GLOBAL OVERRIDES */
+.lg-execution-lab {
+  --lg-deep-plum: #3E2F4F;
+  --lg-text: #30243C;
+  --lg-dusty-lavender: #BDAFD1;
+  --lg-soft-lilac: #DCCFF0;
+  --lg-warm-sand: #D7B38C;
+  --lg-cream: #F2E6D7;
+  --lg-blush: #F3C9DD;
+  --lg-primary: #9563C4;
+  --lg-mint: #A8DDB5;
+  --lg-coral: #F2A0B6;
+  --lg-peach: #F4BF91;
+  --lg-paper: #FAF7FC;
+  --lg-border: rgba(62, 47, 79, .12);
+  --lg-shadow: 0 12px 30px rgba(48, 36, 60, .11);
+  --lg-card-radius: 23px;
+  --lg-control-radius: 15px;
+  --lg-pill-radius: 999px;
+  color: var(--lg-text);
+}

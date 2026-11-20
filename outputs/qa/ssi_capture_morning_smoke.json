@@ -1,0 +1,698 @@
+{
+  "provider": "SSI",
+  "source": "SSI_FASTCONNECT",
+  "checked_at_utc": "2026-11-19T01:37:43Z",
+  "symbols": [
+    "ACB",
+    "BID",
+    "BSR",
+    "CTG",
+    "FPT",
+    "GAS",
+    "GVR",
+    "HDB",
+    "HPG",
+    "LPB",
+    "MBB",
+    "MCH",
+    "MSN",
+    "MWG",
+    "SAB",
+    "SHB",
+    "SSB",
+    "SSI",
+    "STB",
+    "TCB",
+    "TCX",
+    "VCB",
+    "VHM",
+    "VIB",
+    "VIC",
+    "VJC",
+    "VNM",
+    "VPB",
+    "VPL",
+    "VRE"
+  ],
+  "collection_scope": "VN30",
+  "symbol_count": 30,
+  "configuration": {
+    "api_url": "https://api.ssi.com.vn",
+    "streaming_url": "wss://stream.ssi.com.vn/ws/v3",
+    "timeout_ms": 10000,
+    "max_retries": 3,
+    "retry_delay_ms": 2000,
+    "client_rate_cap_rps": 5,
+    "heartbeat_interval_ms": 30000,
+    "trusted_ca_bundle": true
+  },
+  "rest": {
+    "securities_info:ACB": {
+      "status": "PASS",
+      "raw_event_id": "4b261d4e-420d-4aa3-848d-bf17787b3437",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:ACB": {
+      "status": "EMPTY",
+      "raw_event_id": "f6e069fb-acf2-4cf4-ad8a-e3a441a1bf66",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:BID": {
+      "status": "PASS",
+      "raw_event_id": "eb554e44-99f4-49e4-af44-9e04eea074ae",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:BID": {
+      "status": "EMPTY",
+      "raw_event_id": "4a47ce9f-5637-45da-ad22-6045a5039d2e",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:BSR": {
+      "status": "PASS",
+      "raw_event_id": "3ee7813a-fd4f-4ee9-9773-23c2e0f77ec1",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:BSR": {
+      "status": "EMPTY",
+      "raw_event_id": "7b6ebcba-3abe-4d20-900f-7121108baf9e",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:CTG": {
+      "status": "PASS",
+      "raw_event_id": "cb6a9b15-1c75-4ede-830a-5a22f71b155e",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:CTG": {
+      "status": "EMPTY",
+      "raw_event_id": "f1d37bd2-b61c-4812-b457-e4a2f634e68a",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:FPT": {
+      "status": "PASS",
+      "raw_event_id": "7be33a81-517b-4784-80b8-4ec18821fa79",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:FPT": {
+      "status": "EMPTY",
+      "raw_event_id": "cae29b4d-3c80-4887-b92f-a76a8c93cad4",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:GAS": {
+      "status": "PASS",
+      "raw_event_id": "413ef9e4-77da-444b-bdfc-6b658a82298b",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:GAS": {
+      "status": "EMPTY",
+      "raw_event_id": "01d79699-75f0-44e9-86a3-4773acbc6d94",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:GVR": {
+      "status": "PASS",
+      "raw_event_id": "96e29ac8-2e7f-4880-bfd3-c3ae3e39c2d5",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:GVR": {
+      "status": "EMPTY",
+      "raw_event_id": "b3e84fbb-d3d9-4af0-93bb-e3b602588da1",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:HDB": {
+      "status": "PASS",
+      "raw_event_id": "0b5b04d5-48af-4be0-8f83-2b9b4176cb33",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:HDB": {
+      "status": "EMPTY",
+      "raw_event_id": "7a516513-5b19-471f-b021-1ec3e0f08c76",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:HPG": {
+      "status": "PASS",
+      "raw_event_id": "71530abc-ff63-421a-9ed2-b234ecf618e2",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:HPG": {
+      "status": "EMPTY",
+      "raw_event_id": "d06ecd32-9ad4-47cf-be9c-8d91483aaffd",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:LPB": {
+      "status": "PASS",
+      "raw_event_id": "95402a21-606c-4c87-ab10-e40b1f0e3884",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:LPB": {
+      "status": "EMPTY",
+      "raw_event_id": "22b2f1c9-6eb0-40bb-a5e6-bde224e99270",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:MBB": {
+      "status": "PASS",
+      "raw_event_id": "bca9cae9-dc3d-4b28-a8af-d0824ddee7e2",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:MBB": {
+      "status": "EMPTY",
+      "raw_event_id": "3603b269-05af-4091-8087-a8328270f231",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:MCH": {
+      "status": "PASS",
+      "raw_event_id": "610366a0-329e-4987-b31c-33739e7bae01",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:MCH": {
+      "status": "EMPTY",
+      "raw_event_id": "f838194f-ccae-4347-810e-a4286f6e24a6",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:MSN": {
+      "status": "PASS",
+      "raw_event_id": "1b67819c-e0f2-443c-b14b-39984246ed68",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:MSN": {
+      "status": "EMPTY",
+      "raw_event_id": "6937baa3-f320-4ff3-995b-0f18934b522d",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:MWG": {
+      "status": "PASS",
+      "raw_event_id": "59193583-2441-4e5c-8d04-1824b31f4962",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:MWG": {
+      "status": "EMPTY",
+      "raw_event_id": "e3acc5e8-ce58-4bc2-a6b6-46de02a3f0b3",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:SAB": {
+      "status": "PASS",
+      "raw_event_id": "68f95a36-a2f1-4726-8ba4-ca0402697d0a",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:SAB": {
+      "status": "EMPTY",
+      "raw_event_id": "ef5c0313-6090-40bc-aa39-9cc9e768560f",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:SHB": {
+      "status": "PASS",
+      "raw_event_id": "b079d1b8-5083-4c99-a379-3a63d028aa93",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:SHB": {
+      "status": "EMPTY",
+      "raw_event_id": "2ee87db2-0bd1-4cf4-9684-9f500a29700b",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:SSB": {
+      "status": "PASS",
+      "raw_event_id": "9900f38d-672f-47ed-8799-c33ebe0e0fd1",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:SSB": {
+      "status": "EMPTY",
+      "raw_event_id": "fde79cbb-575b-41c0-af28-a252c923c545",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:SSI": {
+      "status": "PASS",
+      "raw_event_id": "cc936144-de52-4b5f-ae14-8e1aff118617",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:SSI": {
+      "status": "EMPTY",
+      "raw_event_id": "b6051c66-2471-4bd4-944b-c1188c2342c1",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:STB": {
+      "status": "PASS",
+      "raw_event_id": "c9e7c07b-d171-422b-b7de-bb8957ca1da9",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:STB": {
+      "status": "EMPTY",
+      "raw_event_id": "162c460b-60f1-4aa4-b926-b920142f789f",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:TCB": {
+      "status": "PASS",
+      "raw_event_id": "89bdb17b-52f2-41a6-929f-0ab348cdb11c",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:TCB": {
+      "status": "EMPTY",
+      "raw_event_id": "fc74fec9-5b19-49dd-afc7-8702a4d80997",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:TCX": {
+      "status": "PASS",
+      "raw_event_id": "a43b1e68-1386-49ba-9f91-b6b4f64e4d7d",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:TCX": {
+      "status": "EMPTY",
+      "raw_event_id": "50d48993-8da7-4cfc-abc3-bd366f3ab0c4",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:VCB": {
+      "status": "PASS",
+      "raw_event_id": "adfd4c96-55f5-4003-a876-1e119c86fa4d",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VCB": {
+      "status": "EMPTY",
+      "raw_event_id": "50993ca7-48bd-4cdd-83a8-7394fcf8365b",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:VHM": {
+      "status": "PASS",
+      "raw_event_id": "75ff9a67-c062-4f4e-a148-876090f1b9a8",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VHM": {
+      "status": "EMPTY",
+      "raw_event_id": "11e636ce-632f-4fe6-a89b-7e91e844ec7e",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:VIB": {
+      "status": "PASS",
+      "raw_event_id": "875f2cd5-3d4a-4126-8221-c9b9c817037b",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VIB": {
+      "status": "EMPTY",
+      "raw_event_id": "a6faa9b8-6577-4cea-8995-95c7bfb3bf09",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:VIC": {
+      "status": "PASS",
+      "raw_event_id": "b13363a4-9104-42b8-99e4-242c92cf1fc2",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VIC": {
+      "status": "EMPTY",
+      "raw_event_id": "1e229c04-46a2-4920-80fc-48f15fce5b1f",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:VJC": {
+      "status": "PASS",
+      "raw_event_id": "c5d243b0-42e3-45cc-9ff0-a9c41adff244",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VJC": {
+      "status": "EMPTY",
+      "raw_event_id": "1ebde962-bfc8-49c9-9b83-20fcf16f449e",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:VNM": {
+      "status": "PASS",
+      "raw_event_id": "a3c29fb2-bb09-4aee-8cf3-eaaacea3e3af",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VNM": {
+      "status": "EMPTY",
+      "raw_event_id": "35e63ea3-2db8-4886-8b0d-01389637143a",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:VPB": {
+      "status": "PASS",
+      "raw_event_id": "da35c8a9-d4ed-4f9c-8207-157d6a623ca9",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VPB": {
+      "status": "EMPTY",
+      "raw_event_id": "72ff7cf4-d23e-4f28-8f10-8d3bd59601f4",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:VPL": {
+      "status": "PASS",
+      "raw_event_id": "ca7019ed-a6d6-4ddc-b0ec-e5093fa308d1",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VPL": {
+      "status": "EMPTY",
+      "raw_event_id": "5fb98d4f-cc74-46e9-b991-cfa5ddd96587",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:VRE": {
+      "status": "PASS",
+      "raw_event_id": "e45af611-b5c7-4ca8-932a-2186f4514334",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VRE": {
+      "status": "EMPTY",
+      "raw_event_id": "943e7ed3-e982-4fdd-ab8e-ccd81d58663f",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "master_data": {
+      "status": "PASS",
+      "raw_event_id": "d9956c92-d54e-4878-9f73-2a0682832f4e",
+      "schema": {
+        "kind": "list",
+        "item_count": 24
+      }
+    }
+  },
+  "stream": {
+    "status": "PASS",
+    "subscription_ack": {
+      "market_flag": "RECEIVED"
+    },
+    "subscriptions": {
+      "trading": [],
+      "data": [
+        "quote.ACB",
+        "quote.BID",
+        "quote.BSR",
+        "quote.CTG",
+        "quote.FPT",
+        "quote.GAS",
+        "quote.GVR",
+        "quote.HDB",
+        "quote.HPG",
+        "quote.LPB",
+        "quote.MBB",
+        "quote.MCH",
+        "quote.MSN",
+        "quote.MWG",
+        "quote.SAB",
+        "quote.SHB",
+        "quote.SSB",
+        "quote.SSI",
+        "quote.STB",
+        "quote.TCB",
+        "quote.TCX",
+        "quote.VCB",
+        "quote.VHM",
+        "quote.VIB",
+        "quote.VIC",
+        "quote.VJC",
+        "quote.VNM",
+        "quote.VPB",
+        "quote.VPL",
+        "quote.VRE",
+        "market.flag"
+      ]
+    },
+    "unsubscribed": {
+      "trading": [],
+      "data": [
+        "quote.ACB",
+        "quote.BID",
+        "quote.BSR",
+        "quote.CTG",
+        "quote.FPT",
+        "quote.GAS",
+        "quote.GVR",
+        "quote.HDB",
+        "quote.HPG",
+        "quote.LPB",
+        "quote.MBB",
+        "quote.MCH",
+        "quote.MSN",
+        "quote.MWG",
+        "quote.SAB",
+        "quote.SHB",
+        "quote.SSB",
+        "quote.SSI",
+        "quote.STB",
+        "quote.TCB",
+        "quote.TCX",
+        "quote.VCB",
+        "quote.VHM",
+        "quote.VIB",
+        "quote.VIC",
+        "quote.VJC",
+        "quote.VNM",
+        "quote.VPB",
+        "quote.VPL",
+        "quote.VRE",
+        "market.flag"
+      ]
+    },
+    "connection_events": [
+      {
+        "state": "connected",
+        "reconnect_count": 0
+      }
+    ],
+    "reconnect_count": 0,
+    "message_count": 2,
+    "message_types": {
+      "dict": 2
+    },
+    "quote_count": 0,
+    "quote_symbols": {},
+    "heartbeat_count": 0,
+    "market_flag_count": 0,
+    "market_flags_seen": [],
+    "phase_join_status": "UNKNOWN",
+    "board_map_symbols": 24
+  },
+  "unit_verification": {
+    "price_multiplier_to_vnd": null,
+    "quantity_multiplier_to_shares": null,
+    "evidence_ref_present": false,
+    "complete_book_verified": false,
+    "price_unit": "UNVERIFIED",
+    "quantity_unit": "UNVERIFIED",
+    "status": "PENDING_LIVE_SCHEMA_RECONCILIATION"
+  },
+  "authentication": {
+    "status": "PASS",
+    "available": true,
+    "expires_at": 1795053163,
+    "refresh_expires_at": 1795081063,
+    "can_refresh": true
+  },
+  "readback": {
+    "requested_quote_events": 0,
+    "raw_quotes_found": 0,
+    "canonical_quotes_parsed": 0,
+    "symbols": {}
+  },
+  "acceptance": {
+    "status": "FAIL",
+    "criterion": "REAL_SSI_QUOTE_PERSISTED_AND_READ_BACK",
+    "reason": "NO_READABLE_TARGET_QUOTE"
+  },
+  "session_capture": {
+    "window": "morning",
+    "listen_seconds": 8.0,
+    "required_additional_trading_days": 3,
+    "note": "A session is counted only from stored LIVE provider timestamps; synthetic and replay rows are excluded."
+  }
+}

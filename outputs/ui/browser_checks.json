@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Dashboard: 6 KPI, mascot and 5 Plotly charts",
+    "Watchlist click synchronizes VPB",
+    "SELL and quantity 5000 trigger recalculation; snapshot locked",
+    "Market Pulse: renders and preserves global selection",
+    "Simulator: renders and preserves global selection",
+    "Replay: renders and preserves global selection",
+    "Charts: renders and preserves global selection",
+    "Alerts: renders and preserves global selection",
+    "Settings: renders and preserves global selection",
+    "LIVE offline/unverified: no financial chart or simulation",
+    "390×844: mobile navigation and no horizontal overflow",
+    "1366×768 screenshot"
+  ]
+}

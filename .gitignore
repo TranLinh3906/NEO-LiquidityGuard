@@ -1,0 +1,37 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+
+# Streamlit local secrets (theme config remains versioned)
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Local runtime
+data/runtime/*
+!data/runtime/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+data/mart/*
+!data/mart/.gitkeep
+
+# Raw data: do not push live market data by default
+data/raw/*
+!data/raw/.gitkeep
+
+# OS
+.DS_Store

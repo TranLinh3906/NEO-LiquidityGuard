@@ -1,0 +1,100 @@
+{
+  "fixture_id": "SYNTHETIC_ORDERBOOK_001",
+  "mode": "SYNTHETIC_TEST",
+  "kpis": {
+    "spread_abs": 50,
+    "mid_price": 29775,
+    "spread_pct": 0.16792611251049538,
+    "spread_bps": 16.79261125104954,
+    "bid_depth_3": 230000,
+    "ask_depth_3": 280000,
+    "obi": -0.09803921568627451
+  },
+  "buy_100000": {
+    "requested_qty": 100000,
+    "filled_qty": 100000,
+    "unfilled_qty": 0,
+    "coverage_ratio": 1.0,
+    "vwap_filled": 29820.0,
+    "slippage_abs": 20.0,
+    "slippage_bps": 6.711409395973154,
+    "level_fills": [
+      {
+        "level": 1,
+        "price": 29800,
+        "fill_qty": 60000
+      },
+      {
+        "level": 2,
+        "price": 29850,
+        "fill_qty": 40000
+      },
+      {
+        "level": 3,
+        "price": 29900,
+        "fill_qty": 0
+      }
+    ]
+  },
+  "buy_400000_over_depth": {
+    "requested_qty": 400000,
+    "filled_qty": 280000,
+    "unfilled_qty": 120000,
+    "coverage_ratio": 0.7,
+    "vwap_filled": 29860.714285714286,
+    "slippage_abs": 60.714285714286,
+    "slippage_bps": 20.373921380632886,
+    "level_fills": [
+      {
+        "level": 1,
+        "price": 29800,
+        "fill_qty": 60000
+      },
+      {
+        "level": 2,
+        "price": 29850,
+        "fill_qty": 100000
+      },
+      {
+        "level": 3,
+        "price": 29900,
+        "fill_qty": 120000
+      }
+    ],
+    "must_not_extrapolate": true
+  },
+  "sell_150000": {
+    "requested_qty": 150000,
+    "filled_qty": 150000,
+    "unfilled_qty": 0,
+    "coverage_ratio": 1.0,
+    "vwap_filled": 29733.333333333332,
+    "slippage_abs": 16.666666666668,
+    "level_fills": [
+      {
+        "level": 1,
+        "price": 29750,
+        "fill_qty": 100000
+      },
+      {
+        "level": 2,
+        "price": 29700,
+        "fill_qty": 50000
+      },
+      {
+        "level": 3,
+        "price": 29650,
+        "fill_qty": 0
+      }
+    ]
+  },
+  "stale_case": {
+    "last_received_at_vn": "2026-11-07T10:00:00+07:00",
+    "now_vn": "2026-11-07T10:00:15+07:00",
+    "stale_threshold_seconds": 5,
+    "expected_is_stale": true,
+    "expected_live_simulatable": false,
+    "expected_replay_allowed": true,
+    "expected_mode_label": "REPLAY"
+  }
+}

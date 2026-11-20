@@ -1,0 +1,47 @@
+{
+  "fixture_id": "SYNTHETIC_ORDERBOOK_001",
+  "mode": "SYNTHETIC_TEST",
+  "warning": "All values below are synthetic test data, not live SSI quotes.",
+  "symbol": "HPG",
+  "market_phase": "LO",
+  "snapshot_completeness": "COMPLETE",
+  "price_unit_assumption": "VND_PER_SHARE_FOR_TEST_ONLY",
+  "quantity_unit_assumption": "SHARES_FOR_TEST_ONLY",
+  "received_at_utc": "2026-11-07T03:00:00.000Z",
+  "quote_time_vn": "2026-11-07T10:00:00.000+07:00",
+  "time_source": "RECEIVED_AT",
+  "bid": [
+    {
+      "level": 1,
+      "price": 29750,
+      "qty": 100000
+    },
+    {
+      "level": 2,
+      "price": 29700,
+      "qty": 80000
+    },
+    {
+      "level": 3,
+      "price": 29650,
+      "qty": 50000
+    }
+  ],
+  "ask": [
+    {
+      "level": 1,
+      "price": 29800,
+      "qty": 60000
+    },
+    {
+      "level": 2,
+      "price": 29850,
+      "qty": 100000
+    },
+    {
+      "level": 3,
+      "price": 29900,
+      "qty": 120000
+    }
+  ]
+}

@@ -1,0 +1,137 @@
+{
+  "provider": "SSI",
+  "source": "SSI_FASTCONNECT",
+  "checked_at_utc": "2026-11-18T06:25:14Z",
+  "symbols": [
+    "VPB",
+    "FPT"
+  ],
+  "configuration": {
+    "api_url": "https://api.ssi.com.vn",
+    "streaming_url": "wss://stream.ssi.com.vn/ws/v3",
+    "timeout_ms": 10000,
+    "max_retries": 3,
+    "retry_delay_ms": 2000,
+    "client_rate_cap_rps": 5,
+    "heartbeat_interval_ms": 30000,
+    "trusted_ca_bundle": true
+  },
+  "rest": {
+    "securities_info:VPB": {
+      "status": "PASS",
+      "raw_event_id": "cb6cc18c-2fd9-49d5-916d-549b329135a4",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:VPB": {
+      "status": "EMPTY",
+      "raw_event_id": "0f3dded6-0526-4cf6-bb1a-1eff0d555134",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "securities_info:FPT": {
+      "status": "PASS",
+      "raw_event_id": "554b2052-6808-40d6-b696-31307eef8c45",
+      "schema": {
+        "kind": "object",
+        "item_count": 1,
+        "field_count": 20
+      }
+    },
+    "securities_summary:FPT": {
+      "status": "EMPTY",
+      "raw_event_id": "a4e03efe-0f61-4e93-8d45-881e8bc29469",
+      "schema": {
+        "kind": "list",
+        "item_count": 0
+      }
+    },
+    "master_data": {
+      "status": "PASS",
+      "raw_event_id": "215b37b9-361b-4ab5-9195-a9044a76f69c",
+      "schema": {
+        "kind": "list",
+        "item_count": 2120
+      }
+    }
+  },
+  "stream": {
+    "status": "PASS",
+    "subscription_ack": {
+      "market_flag": "RECEIVED"
+    },
+    "subscriptions": {
+      "trading": [],
+      "data": [
+        "quote.VPB",
+        "quote.FPT",
+        "market.flag"
+      ]
+    },
+    "unsubscribed": {
+      "trading": [],
+      "data": [
+        "quote.VPB",
+        "quote.FPT",
+        "market.flag"
+      ]
+    },
+    "connection_events": [
+      {
+        "state": "connected",
+        "reconnect_count": 0
+      }
+    ],
+    "reconnect_count": 0,
+    "message_count": 68,
+    "message_types": {
+      "dict": 2,
+      "QuoteMessage": 66
+    },
+    "quote_count": 66,
+    "quote_symbols": {
+      "FPT": 57,
+      "VPB": 9
+    },
+    "heartbeat_count": 1,
+    "market_flag_count": 0,
+    "market_flags_seen": [],
+    "phase_join_status": "UNKNOWN",
+    "board_map_symbols": 2120
+  },
+  "unit_verification": {
+    "price_multiplier_to_vnd": null,
+    "quantity_multiplier_to_shares": null,
+    "evidence_ref_present": false,
+    "complete_book_verified": false,
+    "price_unit": "UNVERIFIED",
+    "quantity_unit": "UNVERIFIED",
+    "status": "PENDING_LIVE_SCHEMA_RECONCILIATION"
+  },
+  "authentication": {
+    "status": "PASS",
+    "available": true,
+    "expires_at": 1794984015,
+    "refresh_expires_at": 1795011915,
+    "can_refresh": true
+  },
+  "readback": {
+    "requested_quote_events": 66,
+    "raw_quotes_found": 66,
+    "canonical_quotes_parsed": 66,
+    "symbols": {
+      "FPT": 57,
+      "VPB": 9
+    }
+  },
+  "acceptance": {
+    "status": "PASS",
+    "criterion": "REAL_SSI_QUOTE_PERSISTED_AND_READ_BACK",
+    "reason": null
+  }
+}

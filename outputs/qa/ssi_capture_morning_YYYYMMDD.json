@@ -1,0 +1,92 @@
+{
+  "provider": "SSI",
+  "source": "SSI_FASTCONNECT",
+  "checked_at_utc": "2026-11-19T01:41:49Z",
+  "symbols": [
+    "ACB",
+    "BID",
+    "BSR",
+    "CTG",
+    "FPT",
+    "GAS",
+    "GVR",
+    "HDB",
+    "HPG",
+    "LPB",
+    "MBB",
+    "MCH",
+    "MSN",
+    "MWG",
+    "SAB",
+    "SHB",
+    "SSB",
+    "SSI",
+    "STB",
+    "TCB",
+    "TCX",
+    "VCB",
+    "VHM",
+    "VIB",
+    "VIC",
+    "VJC",
+    "VNM",
+    "VPB",
+    "VPL",
+    "VRE"
+  ],
+  "collection_scope": "VN30",
+  "symbol_count": 30,
+  "configuration": {
+    "api_url": "https://api.ssi.com.vn",
+    "streaming_url": "wss://stream.ssi.com.vn/ws/v3",
+    "timeout_ms": 10000,
+    "max_retries": 3,
+    "retry_delay_ms": 2000,
+    "client_rate_cap_rps": 5,
+    "heartbeat_interval_ms": 30000,
+    "trusted_ca_bundle": true
+  },
+  "rest": {},
+  "stream": {
+    "status": "FAIL",
+    "error_type": "ModuleNotFoundError",
+    "missing_module": "ssi_sdk",
+    "message_count": 0,
+    "quote_count": 0,
+    "quote_symbols": {},
+    "market_flag_count": 0,
+    "phase_join_status": "UNKNOWN"
+  },
+  "unit_verification": {
+    "price_multiplier_to_vnd": null,
+    "quantity_multiplier_to_shares": null,
+    "evidence_ref_present": false,
+    "complete_book_verified": false,
+    "price_unit": "UNVERIFIED",
+    "quantity_unit": "UNVERIFIED",
+    "status": "PENDING_LIVE_SCHEMA_RECONCILIATION"
+  },
+  "authentication": {
+    "status": "FAIL",
+    "error_type": "ModuleNotFoundError",
+    "missing_module": "ssi_sdk"
+  },
+  "readback": {
+    "requested_quote_events": 0,
+    "raw_quotes_found": 0,
+    "canonical_quotes_parsed": 0,
+    "symbols": {}
+  },
+  "acceptance": {
+    "status": "FAIL",
+    "criterion": "REAL_SSI_QUOTE_PERSISTED_AND_READ_BACK",
+    "reason": "NO_READABLE_TARGET_QUOTE"
+  },
+  "session_capture": {
+    "window": "morning",
+    "listen_seconds": 10091.000163,
+    "scheduled_end_vn": "11:30",
+    "required_additional_trading_days": 3,
+    "note": "A session is counted only from stored LIVE provider timestamps; synthetic and replay rows are excluded."
+  }
+}

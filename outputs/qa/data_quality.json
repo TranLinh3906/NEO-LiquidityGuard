@@ -1,0 +1,62 @@
+{
+  "provider": "SSI",
+  "source": "SSI_FASTCONNECT",
+  "report_mode": "STORED_ORIGINAL",
+  "quote_count": 1264554,
+  "symbol_count": 230,
+  "mode_counts": {
+    "LIVE": 1264554
+  },
+  "update_type_counts": {
+    "FULL_BOOK": 1264554
+  },
+  "valid_book_count": 1264554,
+  "valid_book_ratio": 1.0,
+  "simulatable_count": 145972,
+  "simulatable_ratio": 0.11543358369828413,
+  "simulatable_count_by_mode": {
+    "LIVE": 145972
+  },
+  "w4_live_gate": {
+    "status": "OPEN",
+    "blocking_flags": {
+      "unknown_price_unit": 0,
+      "unknown_quantity_unit": 0,
+      "missing_market_phase": 1105226
+    },
+    "note": "LIVE eligibility is not promoted without SSI unit evidence and a same-board market.flag join."
+  },
+  "complete_snapshot_count": 1264554,
+  "partial_update_count": 0,
+  "missing_book_field_count": 42391,
+  "missing_book_field_ratio": 0.0027935409111301958,
+  "repeated_payload_hash_count": 122385,
+  "note_on_hashes": "Repeated payload hashes are QA signals, not automatic duplicates.",
+  "provenance_error_count": 0,
+  "stale_count": 0,
+  "gap_threshold_seconds": 60,
+  "gap_count": 13040,
+  "max_gap_seconds": 171633.133,
+  "first_received_at_utc": "2026-11-16T06:41:47.732Z",
+  "last_received_at_utc": "2026-11-20T07:46:08.131Z",
+  "flag_counts": {
+    "MISSING_MARKET_PHASE": 1105226,
+    "MISSING_BID_LEVEL": 18511,
+    "MISSING_ASK_LEVEL": 7371,
+    "OUTSIDE_ALLOWED_PHASE": 13356
+  },
+  "session_days_observed": 4,
+  "required_live_session_days": 5,
+  "missing_live_session_days_to_target": 1,
+  "session_symbol_windows": 437,
+  "full_session_symbol_windows": 156,
+  "full_session_days_observed": 1,
+  "missing_full_session_days_to_target": 4,
+  "session_downtime_gap_count": 12770,
+  "max_session_downtime_seconds": 9000.0,
+  "sample_label_integrity": {
+    "synthetic_count": 0,
+    "live_count": 1264554,
+    "replay_is_view_only": true
+  }
+}
